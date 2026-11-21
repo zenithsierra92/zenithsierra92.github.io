@@ -1,0 +1,1940 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>张津瑜_事件记录,影像档案与舆论观察</title>
+<meta name="description" content="张津瑜影像档案官网，聚焦舆论事件记录、影像资料归档与公共讨论观察，持续运营的品牌内容平台。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231a1d23'/%3E%3Cpath d='M18 20h22a6 6 0 0 1 6 6v14a6 6 0 0 1-6 6H18z' fill='%23ff5252'/%3E%3Cpath d='M30 28l12 7-12 7z' fill='%23f4f4f4'/%3E%3C/svg%3E">
+<style>
+:root{
+  --zj-ink:#14161b;
+  --zj-ink2:#1e2229;
+  --zj-line:#2c3139;
+  --zj-red:#ff4a4a;
+  --zj-red2:#d93030;
+  --zj-paper:#f5f3ef;
+  --zj-gray:#8b919c;
+  --zj-text:#23262c;
+  --zj-mid:#5a6068;
+  --zj-radius:4px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--zj-paper);
+  color:var(--zj-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+ul{list-style:none}
+
+/* ---------- sticky wrapper ---------- */
+.zj-sticky-top{
+  position:sticky;top:0;z-index:120;
+}
+/* ---------- notice bar ---------- */
+.zj-notice-bar{
+  background:var(--zj-ink);
+  color:#e8e8e8;
+  font-size:13px;
+  display:flex;align-items:center;gap:14px;
+  padding:0 20px;
+  border-bottom:1px solid #33373f;
+  overflow:hidden;
+}
+.zj-notice-label{
+  flex:0 0 auto;
+  background:var(--zj-red);
+  color:#fff;
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:1px;
+  padding:3px 9px;
+  border-radius:2px;
+}
+.zj-notice-track{
+  flex:1 1 auto;
+  overflow:hidden;
+  white-space:nowrap;
+  position:relative;
+  height:38px;
+}
+.zj-notice-move{
+  display:inline-block;
+  padding-left:100%;
+  line-height:38px;
+  animation:zjMarquee 26s linear infinite;
+  color:#c9ccd2;
+}
+.zj-notice-move b{color:#fff;font-weight:600}
+@keyframes zjMarquee{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+.zj-notice-time{flex:0 0 auto;color:var(--zj-gray);font-size:12px;letter-spacing:.5px}
+
+/* ---------- header ---------- */
+.zj-header{
+  background:rgba(20,22,27,.97);
+  backdrop-filter:blur(6px);
+  border-bottom:1px solid #2a2e36;
+  color:#f0f0f0;
+}
+.zj-header-inner{
+  max-width:1220px;margin:0 auto;
+  display:flex;align-items:center;gap:26px;
+  padding:0 20px;height:64px;
+}
+.zj-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.zj-brand-mark{
+  width:38px;height:38px;border-radius:8px;
+  background:linear-gradient(145deg,#ff5252,#b81f1f);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(255,60,60,.35);
+}
+.zj-brand-mark svg{width:20px;height:20px}
+.zj-brand-name{font-size:18px;font-weight:800;letter-spacing:1px;line-height:1.2}
+.zj-brand-sub{font-size:10px;color:var(--zj-gray);letter-spacing:2px;text-transform:uppercase}
+
+.zj-nav{display:flex;gap:4px;flex:1 1 auto;margin-left:8px;flex-wrap:wrap}
+.zj-nav a{
+  font-size:14px;color:#c4c8cf;padding:7px 12px;border-radius:4px;
+  transition:.2s;white-space:nowrap;
+}
+.zj-nav a:hover{color:#fff;background:#282d35}
+.zj-nav a.zj-nav-active{color:#fff;background:#2a2f37}
+
+.zj-search-wrap{flex:0 0 auto;position:relative}
+.zj-search{
+  display:flex;align-items:center;
+  background:#242830;border:1px solid #343943;border-radius:20px;
+  padding:0 6px 0 14px;height:36px;width:230px;transition:.25s;
+}
+.zj-search:focus-within{border-color:var(--zj-red);width:260px}
+.zj-search input{
+  background:none;border:none;outline:none;color:#eee;font-size:13px;flex:1;min-width:0;
+}
+.zj-search input::placeholder{color:#757b85}
+.zj-search button{
+  width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  color:#aab0b9;
+}
+.zj-search button:hover{color:var(--zj-red)}
+.zj-search-feedback{
+  position:absolute;top:44px;right:0;width:290px;
+  background:#1e2229;border:1px solid #343943;border-radius:8px;
+  padding:10px 14px;font-size:12.5px;color:#b6bbc4;display:none;
+  box-shadow:0 14px 34px rgba(0,0,0,.5);
+}
+.zj-search-feedback.zj-show{display:block}
+
+.zj-burger{
+  display:none;width:38px;height:38px;border-radius:6px;
+  color:#e2e2e2;align-items:center;justify-content:center;
+  border:1px solid #343943;
+}
+
+/* ---------- hero ---------- */
+.zj-hero{
+  position:relative;
+  background:
+    radial-gradient(circle at 78% 18%,rgba(255,74,74,.18),transparent 52%),
+    radial-gradient(circle at 12% 88%,rgba(90,110,140,.22),transparent 60%),
+    linear-gradient(160deg,#16181d 0%,#1d212a 55%,#14161a 100%);
+  color:#eef0f3;
+  overflow:hidden;
+  padding:64px 20px 70px;
+}
+.zj-hero-scan{
+  position:absolute;inset:0;pointer-events:none;
+  background-image:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0 1px,transparent 1px 4px);
+  opacity:.5;
+}
+.zj-hero-inner{
+  max-width:1220px;margin:0 auto;
+  display:grid;grid-template-columns:1.02fr .98fr;gap:52px;align-items:center;
+  position:relative;
+}
+.zj-hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:12px;letter-spacing:2px;color:#ffb3b3;
+  border:1px solid rgba(255,74,74,.45);
+  padding:5px 14px;border-radius:2px;margin-bottom:22px;
+  background:rgba(255,74,74,.08);
+}
+.zj-hero-tag::before{content:"";width:6px;height:6px;background:var(--zj-red);border-radius:50%}
+.zj-hero h1{
+  font-size:clamp(42px,6vw,72px);
+  line-height:1.06;font-weight:900;letter-spacing:2px;
+  margin-bottom:14px;
+}
+.zj-hero h1 span{
+  color:var(--zj-red);
+  text-shadow:0 0 34px rgba(255,74,74,.45);
+}
+.zj-hero-slogan{
+  font-size:17px;color:#c3c8d0;letter-spacing:1px;margin-bottom:24px;
+}
+.zj-hero-desc{
+  font-size:14.5px;color:#a8aeb8;max-width:530px;margin-bottom:30px;
+}
+.zj-hero-stats{
+  display:flex;gap:34px;margin-bottom:34px;flex-wrap:wrap;
+}
+.zj-stat-num{
+  font-size:28px;font-weight:800;color:#fff;letter-spacing:1px;
+  font-variant-numeric:tabular-nums;
+}
+.zj-stat-num em{color:var(--zj-red);font-style:normal;font-size:16px;margin-left:2px}
+.zj-stat-label{font-size:12px;color:#7d848f;letter-spacing:1.5px}
+.zj-hero-actions{display:flex;gap:14px;flex-wrap:wrap}
+.zj-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:14px;font-weight:600;padding:12px 26px;border-radius:3px;
+  transition:.22s;letter-spacing:.5px;
+}
+.zj-btn-primary{background:var(--zj-red);color:#fff;box-shadow:0 8px 24px rgba(255,74,74,.3)}
+.zj-btn-primary:hover{background:#ff6161;transform:translateY(-2px)}
+.zj-btn-ghost{border:1px solid #454b55;color:#d6dae0}
+.zj-btn-ghost:hover{border-color:#8b919c;background:rgba(255,255,255,.04)}
+
+.zj-hero-visual{position:relative}
+.zj-hero-frame{
+  position:relative;border-radius:6px;overflow:hidden;
+  border:1px solid #383e48;
+  box-shadow:0 30px 70px rgba(0,0,0,.6);
+  aspect-ratio:16/10;
+}
+.zj-hero-frame img{width:100%;height:100%;object-fit:cover}
+.zj-hero-frame::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,.72) 100%);
+}
+.zj-hero-frame-cap{
+  position:absolute;left:18px;right:18px;bottom:16px;z-index:2;
+  display:flex;align-items:flex-end;justify-content:space-between;gap:10px;
+}
+.zj-hero-frame-cap h3{font-size:15px;color:#fff;font-weight:700;line-height:1.4}
+.zj-hero-frame-cap span{font-size:11px;color:#ffb0b0;letter-spacing:1px;white-space:nowrap}
+.zj-hero-badge{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(255,74,74,.92);color:#fff;font-size:11px;
+  padding:3px 10px;border-radius:2px;letter-spacing:1px;
+}
+.zj-hero-mini{
+  position:absolute;right:-14px;bottom:-26px;
+  width:190px;border-radius:6px;overflow:hidden;
+  border:3px solid #1b1e24;box-shadow:0 18px 40px rgba(0,0,0,.6);
+  aspect-ratio:16/10;z-index:3;
+}
+.zj-hero-mini img{width:100%;height:100%;object-fit:cover}
+
+/* ---------- section base ---------- */
+.zj-section{padding:74px 20px;scroll-margin-top:112px}
+.zj-section-alt{background:#efece6}
+.zj-wrap{max-width:1220px;margin:0 auto}
+.zj-sec-head{margin-bottom:42px}
+.zj-sec-kicker{
+  font-size:12px;letter-spacing:3px;color:var(--zj-red2);font-weight:700;
+  display:flex;align-items:center;gap:10px;margin-bottom:12px;
+}
+.zj-sec-kicker::after{content:"";flex:0 0 40px;height:1px;background:var(--zj-red2);opacity:.5}
+.zj-sec-title{font-size:clamp(26px,3.2vw,36px);font-weight:900;letter-spacing:1px;color:var(--zj-ink)}
+.zj-sec-sub{font-size:14.5px;color:var(--zj-mid);margin-top:12px;max-width:760px}
+
+/* ---------- intro / deep parse ---------- */
+.zj-intro-grid{display:grid;grid-template-columns:1fr 340px;gap:44px;align-items:start}
+.zj-article p{font-size:15px;color:#3a3f47;margin-bottom:16px;text-align:justify}
+.zj-article p b{color:var(--zj-ink);font-weight:700}
+.zj-article h3{
+  font-size:18px;font-weight:800;color:var(--zj-ink);margin:26px 0 12px;
+  padding-left:12px;border-left:3px solid var(--zj-red);
+}
+.zj-side-card{
+  background:#fff;border:1px solid #e2ded6;border-radius:6px;padding:24px;
+  box-shadow:0 10px 30px rgba(30,32,38,.05);
+}
+.zj-side-card + .zj-side-card{margin-top:20px}
+.zj-side-card h3{font-size:15px;font-weight:800;color:var(--zj-ink);margin-bottom:14px;letter-spacing:.5px}
+.zj-side-list li{
+  display:flex;gap:10px;align-items:baseline;
+  font-size:13.5px;color:#4a5058;padding:9px 0;border-bottom:1px dashed #eae6df;
+}
+.zj-side-list li:last-child{border-bottom:none}
+.zj-side-index{color:var(--zj-red2);font-weight:800;font-size:12px;flex:0 0 auto}
+.zj-keyword-chips{display:flex;flex-wrap:wrap;gap:8px}
+.zj-keyword-chips span{
+  font-size:12px;color:#4a5058;background:#f2efe9;border:1px solid #e2ded6;
+  padding:5px 12px;border-radius:20px;
+}
+
+/* ---------- focus videos ---------- */
+.zj-focus-grid{
+  display:grid;grid-template-columns:1.35fr 1fr;gap:22px;
+}
+.zj-card{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;overflow:hidden;
+  transition:.25s;display:flex;flex-direction:column;
+}
+.zj-card:hover{transform:translateY(-4px);box-shadow:0 18px 40px rgba(30,32,38,.12);border-color:#d6d1c7}
+.zj-thumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b1e24}
+.zj-thumb img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.zj-card:hover .zj-thumb img{transform:scale(1.05)}
+.zj-thumb::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,0) 45%,rgba(0,0,0,.55) 100%);
+}
+.zj-play{
+  position:absolute;inset:0;margin:auto;z-index:2;
+  width:52px;height:52px;border-radius:50%;
+  background:rgba(255,74,74,.92);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 20px rgba(0,0,0,.4);
+  transition:.25s;
+}
+.zj-card:hover .zj-play{transform:scale(1.1)}
+.zj-play svg{width:18px;height:18px;margin-left:3px}
+.zj-thumb-tag{
+  position:absolute;top:12px;left:12px;z-index:2;
+  background:rgba(20,22,27,.82);color:#fff;font-size:11px;
+  padding:3px 10px;border-radius:2px;letter-spacing:.5px;
+  backdrop-filter:blur(4px);
+}
+.zj-thumb-dur{
+  position:absolute;bottom:10px;right:12px;z-index:2;
+  font-size:11px;color:#fff;background:rgba(0,0,0,.65);
+  padding:2px 8px;border-radius:2px;letter-spacing:.5px;
+}
+.zj-card-body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.zj-card-body h3{font-size:16.5px;font-weight:800;color:var(--zj-ink);line-height:1.45;margin-bottom:8px}
+.zj-card-big .zj-card-body h3{font-size:21px}
+.zj-card-body p{font-size:13.5px;color:#5a6068;margin-bottom:14px;flex:1}
+.zj-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:12px;color:#8b919c}
+.zj-author-dot{
+  width:22px;height:22px;border-radius:50%;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:800;color:#fff;background:var(--zj-red2);
+}
+.zj-card-ops{display:flex;gap:8px;margin-top:14px;padding-top:13px;border-top:1px solid #f0ece5}
+.zj-op{
+  display:inline-flex;align-items:center;gap:5px;font-size:12px;color:#6b7178;
+  padding:4px 10px;border-radius:20px;border:1px solid #e4e0d9;transition:.2s;
+}
+.zj-op:hover{color:var(--zj-red2);border-color:#f0b5b5;background:#fdf3f3}
+.zj-op svg{width:13px;height:13px}
+.zj-op.zj-active{color:var(--zj-red2);border-color:#f0b5b5;background:#fdf3f3}
+
+.zj-focus-side{display:grid;grid-template-columns:1fr;gap:22px}
+
+/* ---------- video stream grid ---------- */
+.zj-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.zj-filter-bar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.zj-chip{
+  font-size:13px;color:#5a6068;background:#fff;border:1px solid #e4e0d9;
+  padding:6px 16px;border-radius:20px;transition:.2s;
+}
+.zj-chip:hover{border-color:#c9c3b8}
+.zj-chip.zj-chip-on{background:var(--zj-ink);color:#fff;border-color:var(--zj-ink)}
+
+/* ---------- topic / special ---------- */
+.zj-topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.zj-topic{
+  position:relative;border-radius:6px;overflow:hidden;aspect-ratio:3/4;
+  cursor:pointer;
+}
+.zj-topic img{width:100%;height:100%;object-fit:cover;transition:.45s}
+.zj-topic:hover img{transform:scale(1.06)}
+.zj-topic::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.05) 32%,rgba(0,0,0,.86) 100%);
+}
+.zj-topic-info{position:absolute;left:18px;right:18px;bottom:18px;z-index:2;color:#fff}
+.zj-topic-info em{
+  font-style:normal;font-size:11px;letter-spacing:1.5px;color:#ffb0b0;
+  display:block;margin-bottom:6px;
+}
+.zj-topic-info h3{font-size:17px;font-weight:800;line-height:1.4;margin-bottom:8px}
+.zj-topic-info p{font-size:12px;color:#c3c7cf;line-height:1.6}
+.zj-topic-state{
+  display:inline-block;margin-top:10px;font-size:11px;
+  background:rgba(255,255,255,.16);padding:2px 10px;border-radius:2px;
+  backdrop-filter:blur(4px);
+}
+
+/* ---------- creators ---------- */
+.zj-creator-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.zj-creator{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;padding:24px;
+  display:flex;gap:16px;transition:.25s;align-items:flex-start;
+}
+.zj-creator:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(30,32,38,.1)}
+.zj-avatar{
+  width:56px;height:56px;border-radius:50%;flex:0 0 auto;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;font-weight:900;color:#fff;letter-spacing:1px;
+  box-shadow:0 4px 14px rgba(0,0,0,.14);
+}
+.zj-avatar-a{background:linear-gradient(135deg,#ff5252,#a81c1c)}
+.zj-avatar-b{background:linear-gradient(135deg,#3f7dff,#1c3aa8)}
+.zj-avatar-c{background:linear-gradient(135deg,#f0a13a,#a8631c)}
+.zj-avatar-d{background:linear-gradient(135deg,#35b98a,#156b4c)}
+.zj-avatar-e{background:linear-gradient(135deg,#a06bff,#5a2ea8)}
+.zj-avatar-f{background:linear-gradient(135deg,#ff6b9d,#a82e5a)}
+.zj-creator-info{flex:1;min-width:0}
+.zj-creator-info h3{font-size:16px;font-weight:800;color:var(--zj-ink);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.zj-verified{
+  font-size:10px;background:#fdf3f3;color:var(--zj-red2);border:1px solid #f0c1c1;
+  padding:1px 7px;border-radius:10px;font-weight:700;
+}
+.zj-creator-field{font-size:12px;color:var(--zj-red2);margin:5px 0 8px;letter-spacing:.5px}
+.zj-creator-info p{font-size:13px;color:#5a6068;line-height:1.65;margin-bottom:12px}
+.zj-creator-stats{display:flex;gap:18px;font-size:12px;color:#8b919c}
+.zj-creator-stats b{color:var(--zj-ink);font-weight:800;font-size:13px}
+
+/* ---------- essay / story ---------- */
+.zj-story-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.zj-story{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;padding:26px 26px 22px;
+  position:relative;overflow:hidden;transition:.25s;
+}
+.zj-story:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(30,32,38,.09)}
+.zj-story::before{
+  content:"";position:absolute;left:0;top:0;width:4px;height:100%;
+  background:linear-gradient(180deg,var(--zj-red),transparent);
+}
+.zj-story-date{font-size:11px;color:#a0a5ad;letter-spacing:1.5px;margin-bottom:10px}
+.zj-story h3{font-size:16.5px;font-weight:800;color:var(--zj-ink);margin-bottom:10px;line-height:1.5}
+.zj-story p{font-size:13.5px;color:#5a6068;line-height:1.8;margin-bottom:14px}
+.zj-story-author{font-size:12px;color:var(--zj-red2);font-weight:700}
+
+/* ---------- wall ---------- */
+.zj-wall{
+  display:grid;grid-template-columns:repeat(6,1fr);
+  grid-auto-rows:130px;gap:14px;
+}
+.zj-wall-item{
+  position:relative;border-radius:5px;overflow:hidden;background:#1b1e24;
+}
+.zj-wall-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+.zj-wall-item:hover img{transform:scale(1.07)}
+.zj-wall-item::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,transparent 52%,rgba(0,0,0,.68));
+  opacity:0;transition:.3s;
+}
+.zj-wall-item:hover::after{opacity:1}
+.zj-wall-item span{
+  position:absolute;left:12px;right:12px;bottom:10px;z-index:2;
+  font-size:12px;color:#fff;opacity:0;transform:translateY(6px);transition:.3s;
+}
+.zj-wall-item:hover span{opacity:1;transform:translateY(0)}
+.zj-wall-w{grid-column:span 2}
+.zj-wall-h{grid-row:span 2}
+.zj-wall-big{grid-column:span 3;grid-row:span 2}
+.zj-wall-sm{grid-column:span 1}
+
+/* ---------- reviews ---------- */
+.zj-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.zj-review{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;padding:22px;
+  display:flex;flex-direction:column;gap:12px;transition:.25s;
+}
+.zj-review:hover{border-color:#c9c3b8}
+.zj-review-head{display:flex;align-items:center;gap:10px}
+.zj-review-head .zj-avatar{width:38px;height:38px;font-size:14px}
+.zj-review-name{font-size:13.5px;font-weight:800;color:var(--zj-ink)}
+.zj-review-stars{font-size:11px;color:#e8a020;letter-spacing:1px}
+.zj-review p{font-size:13.5px;color:#4a5058;line-height:1.8;flex:1}
+.zj-review-foot{font-size:11.5px;color:#a0a5ad;display:flex;justify-content:space-between;align-items:center}
+
+/* ---------- inspiration ---------- */
+.zj-inspire-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.zj-inspire{
+  background:var(--zj-ink);color:#e8eaee;border-radius:6px;padding:26px;
+  transition:.25s;position:relative;overflow:hidden;
+}
+.zj-inspire:hover{transform:translateY(-3px);box-shadow:0 16px 38px rgba(20,22,27,.34)}
+.zj-inspire-num{
+  font-size:34px;font-weight:900;color:rgba(255,74,74,.32);
+  line-height:1;margin-bottom:14px;letter-spacing:1px;
+}
+.zj-inspire h3{font-size:16px;font-weight:800;color:#fff;margin-bottom:10px}
+.zj-inspire p{font-size:13px;color:#9ba1ab;line-height:1.8}
+
+/* ---------- timeline / updates ---------- */
+.zj-timeline{position:relative;padding-left:26px}
+.zj-timeline::before{
+  content:"";position:absolute;left:5px;top:6px;bottom:6px;width:1px;
+  background:linear-gradient(180deg,var(--zj-red),#dcd7ce);
+}
+.zj-tl-item{position:relative;padding-bottom:26px}
+.zj-tl-item:last-child{padding-bottom:0}
+.zj-tl-item::before{
+  content:"";position:absolute;left:-25px;top:7px;width:9px;height:9px;border-radius:50%;
+  background:#fff;border:2px solid var(--zj-red);
+}
+.zj-tl-date{font-size:12px;color:var(--zj-red2);font-weight:700;letter-spacing:1px;margin-bottom:5px}
+.zj-tl-item h3{font-size:15px;font-weight:800;color:var(--zj-ink);margin-bottom:6px}
+.zj-tl-item p{font-size:13px;color:#5a6068;line-height:1.75}
+
+/* ---------- partners ---------- */
+.zj-partners{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
+.zj-partner{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;
+  height:78px;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:700;color:#6b7178;letter-spacing:1px;transition:.25s;
+  text-align:center;padding:0 10px;
+}
+.zj-partner:hover{border-color:var(--zj-red);color:var(--zj-red2);transform:translateY(-2px)}
+
+/* ---------- faq ---------- */
+.zj-faq{max-width:900px;margin:0 auto}
+.zj-faq details{
+  background:#fff;border:1px solid #e4e0d9;border-radius:6px;
+  margin-bottom:12px;overflow:hidden;transition:.2s;
+}
+.zj-faq details[open]{border-color:#d6d1c7;box-shadow:0 8px 24px rgba(30,32,38,.07)}
+.zj-faq summary{
+  list-style:none;cursor:pointer;padding:18px 54px 18px 22px;
+  font-size:15px;font-weight:700;color:var(--zj-ink);position:relative;
+}
+.zj-faq summary::-webkit-details-marker{display:none}
+.zj-faq summary::after{
+  content:"+";position:absolute;right:22px;top:50%;transform:translateY(-50%);
+  font-size:20px;color:var(--zj-red2);font-weight:400;transition:.25s;
+}
+.zj-faq details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.zj-faq p{font-size:13.5px;color:#5a6068;padding:0 22px 20px;line-height:1.8}
+
+/* ---------- contact ---------- */
+.zj-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.zj-contact-card{
+  background:var(--zj-ink);color:#e8eaee;border-radius:8px;padding:40px 36px;
+  position:relative;overflow:hidden;
+}
+.zj-contact-card::before{
+  content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;
+  border-radius:50%;background:radial-gradient(circle,rgba(255,74,74,.28),transparent 70%);
+}
+.zj-contact-card h3{font-size:22px;font-weight:900;color:#fff;margin-bottom:14px;position:relative}
+.zj-contact-card p{font-size:13.5px;color:#9ba1ab;line-height:1.8;margin-bottom:26px;position:relative}
+.zj-contact-list{display:flex;flex-direction:column;gap:14px;position:relative}
+.zj-contact-list li{display:flex;gap:12px;font-size:13.5px;color:#c3c8d0;align-items:baseline}
+.zj-contact-list b{color:#fff;font-weight:700;flex:0 0 72px;font-size:12px;letter-spacing:1px}
+.zj-contact-actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;position:relative}
+.zj-form{
+  background:#fff;border:1px solid #e4e0d9;border-radius:8px;padding:32px 30px;
+}
+.zj-form h3{font-size:18px;font-weight:800;color:var(--zj-ink);margin-bottom:6px}
+.zj-form p{font-size:13px;color:#8b919c;margin-bottom:22px}
+.zj-field{margin-bottom:16px}
+.zj-field label{display:block;font-size:12.5px;color:#5a6068;margin-bottom:6px;font-weight:600}
+.zj-field input,.zj-field textarea,.zj-field select{
+  width:100%;border:1px solid #e4e0d9;background:#faf9f6;border-radius:4px;
+  padding:10px 14px;font-size:13.5px;color:var(--zj-text);outline:none;
+  font-family:inherit;transition:.2s;
+}
+.zj-field input:focus,.zj-field textarea:focus,.zj-field select:focus{
+  border-color:var(--zj-red);background:#fff;
+}
+.zj-field textarea{resize:vertical;min-height:90px}
+.zj-form .zj-btn-primary{width:100%;justify-content:center;margin-top:6px}
+
+/* ---------- footer ---------- */
+.zj-footer{background:var(--zj-ink);color:#8b919c;padding:60px 20px 0;font-size:13px}
+.zj-footer-inner{max-width:1220px;margin:0 auto}
+.zj-footer-top{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px}
+.zj-footer-brand h3{font-size:18px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:1px}
+.zj-footer-brand p{line-height:1.85;font-size:13px;color:#7d848f;max-width:340px}
+.zj-footer-col h4{font-size:13.5px;color:#fff;font-weight:700;margin-bottom:14px;letter-spacing:1px}
+.zj-footer-col li{margin-bottom:9px}
+.zj-footer-col a{font-size:13px;color:#7d848f;transition:.2s}
+.zj-footer-col a:hover{color:var(--zj-red)}
+.zj-footer-bottom{
+  border-top:1px solid #2a2e36;padding:22px 0;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12px;color:#666c76;
+}
+
+/* ---------- back to top ---------- */
+.zj-top-btn{
+  position:fixed;right:24px;bottom:28px;z-index:100;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--zj-ink);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 26px rgba(20,22,27,.32);
+  opacity:0;visibility:hidden;transform:translateY(12px);transition:.3s;
+}
+.zj-top-btn.zj-show{opacity:1;visibility:visible;transform:translateY(0)}
+.zj-top-btn:hover{background:var(--zj-red)}
+
+/* ---------- toast ---------- */
+.zj-toast{
+  position:fixed;left:50%;bottom:44px;transform:translate(-50%,20px);
+  background:var(--zj-ink);color:#fff;font-size:13.5px;
+  padding:11px 24px;border-radius:4px;z-index:300;
+  opacity:0;visibility:hidden;transition:.3s;pointer-events:none;
+  box-shadow:0 14px 34px rgba(0,0,0,.3);max-width:86vw;text-align:center;
+}
+.zj-toast.zj-show{opacity:1;visibility:visible;transform:translate(-50%,0)}
+
+/* ---------- modal ---------- */
+.zj-modal{
+  position:fixed;inset:0;z-index:250;display:none;
+  align-items:center;justify-content:center;padding:20px;
+  background:rgba(12,14,18,.68);backdrop-filter:blur(4px);
+}
+.zj-modal.zj-show{display:flex}
+.zj-modal-box{
+  background:#fff;border-radius:8px;max-width:480px;width:100%;
+  padding:34px 32px;position:relative;max-height:84vh;overflow:auto;
+}
+.zj-modal-close{
+  position:absolute;right:14px;top:12px;width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:#8b919c;font-size:20px;
+}
+.zj-modal-close:hover{background:#f2efe9;color:var(--zj-ink)}
+.zj-modal-box h3{font-size:19px;font-weight:900;color:var(--zj-ink);margin-bottom:8px}
+.zj-modal-box .zj-modal-sub{font-size:13px;color:#8b919c;margin-bottom:20px}
+.zj-share-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
+.zj-share-btn{
+  flex:1;min-width:90px;border:1px solid #e4e0d9;border-radius:5px;
+  padding:12px 8px;font-size:13px;font-weight:600;color:#4a5058;transition:.2s;text-align:center;
+}
+.zj-share-btn:hover{border-color:var(--zj-red);color:var(--zj-red2);background:#fdf6f6}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .zj-hero-inner{grid-template-columns:1fr;gap:36px}
+  .zj-hero-mini{display:none}
+  .zj-intro-grid{grid-template-columns:1fr}
+  .zj-focus-grid{grid-template-columns:1fr}
+  .zj-stream{grid-template-columns:repeat(2,1fr)}
+  .zj-topic-grid{grid-template-columns:repeat(2,1fr)}
+  .zj-creator-grid{grid-template-columns:repeat(2,1fr)}
+  .zj-story-grid{grid-template-columns:1fr 1fr}
+  .zj-review-grid{grid-template-columns:repeat(2,1fr)}
+  .zj-inspire-grid{grid-template-columns:1fr}
+  .zj-partners{grid-template-columns:repeat(3,1fr)}
+  .zj-contact-grid{grid-template-columns:1fr}
+  .zj-footer-top{grid-template-columns:1fr 1fr}
+  .zj-wall{grid-template-columns:repeat(4,1fr)}
+  .zj-wall-big{grid-column:span 2}
+}
+@media (max-width:820px){
+  .zj-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#181b21;flex-direction:column;padding:10px 14px 18px;
+    border-bottom:1px solid #2a2e36;gap:2px;box-shadow:0 18px 30px rgba(0,0,0,.4);
+  }
+  .zj-nav.zj-nav-open{display:flex}
+  .zj-header-inner{position:relative;gap:12px}
+  .zj-burger{display:flex}
+  .zj-search-wrap{display:none}
+  .zj-section{padding:56px 18px}
+  .zj-stream{grid-template-columns:1fr}
+  .zj-story-grid,.zj-review-grid{grid-template-columns:1fr}
+  .zj-topic-grid{grid-template-columns:1fr 1fr}
+  .zj-wall{grid-template-columns:repeat(3,1fr);grid-auto-rows:110px}
+  .zj-wall-big{grid-column:span 2;grid-row:span 2}
+  .zj-notice-time{display:none}
+  .zj-footer-top{grid-template-columns:1fr}
+  .zj-hero-stats{gap:22px}
+  .zj-creator-grid{grid-template-columns:1fr}
+  .zj-partners{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:520px){
+  .zj-hero{padding:44px 16px 54px}
+  .zj-hero h1{font-size:40px}
+  .zj-topic-grid{grid-template-columns:1fr}
+  .zj-wall{grid-template-columns:repeat(2,1fr)}
+  .zj-wall-big{grid-column:span 2}
+  .zj-brand-sub{display:none}
+  .zj-contact-card{padding:30px 22px}
+  .zj-form{padding:26px 20px}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="zj-sticky-top">
+  <div class="zj-notice-bar">
+    <span class="zj-notice-label">官方公告</span>
+    <div class="zj-notice-track">
+      <div class="zj-notice-move">
+        <b>2026-11-18</b> 新增《影像档案·公共讨论观察》第 4 期上线，开放社区投票通道 &nbsp;·&nbsp;
+        <b>2026-11-15</b> 张津瑜影像档案官网「创作者共创计划」第 3 批报名开启 &nbsp;·&nbsp;
+        <b>2026-11-10</b> 官方发布《内容合规与真实性守则》修订版，欢迎下载查阅 &nbsp;·&nbsp;
+        <b>2026-11-06</b> 专题「舆论场的三十天」更新第 9 集，累计上传影像素材超 2,600 条
+      </div>
+    </div>
+    <span class="zj-notice-time">2026/11/19</span>
+  </div>
+
+  <header class="zj-header">
+    <div class="zj-header-inner">
+      <a href="#zj-home" class="zj-brand">
+        <span class="zj-brand-mark">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 6h11a4 4 0 0 1 4 4v8H8a4 4 0 0 1-4-4z" fill="#fff"/><path d="M11 10l6 3.5-6 3.5z" fill="#d93030"/></svg>
+        </span>
+        <span>
+          <span class="zj-brand-name">张津瑜影像档案</span>
+          <span class="zj-brand-sub">Official Video Archive</span>
+        </span>
+      </a>
+      <nav class="zj-nav" id="zjNav">
+        <a href="#zj-home" class="zj-nav-active">首页</a>
+        <a href="#zj-focus">焦点影像</a>
+        <a href="#zj-stream">档案内容</a>
+        <a href="#zj-topics">专题企划</a>
+        <a href="#zj-creators">创作者</a>
+        <a href="#zj-updates">企业动态</a>
+        <a href="#zj-faq">帮助</a>
+        <a href="#zj-contact">联系</a>
+      </nav>
+      <div class="zj-search-wrap">
+        <div class="zj-search">
+          <input type="text" id="zjSearchInput" placeholder="搜索影像档案、专题、创作者" aria-label="站内搜索">
+          <button id="zjSearchBtn" aria-label="搜索">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+          </button>
+        </div>
+        <div class="zj-search-feedback" id="zjSearchFeedback"></div>
+      </div>
+      <button class="zj-burger" id="zjBurger" aria-label="展开导航">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+</div>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="zj-hero" id="zj-home">
+  <div class="zj-hero-scan"></div>
+  <div class="zj-hero-inner">
+    <div>
+      <div class="zj-hero-tag">官方网站 · 品牌影像档案</div>
+      <h1>张津瑜</h1>
+      <p class="zj-hero-slogan">以影像记录公共讨论，以档案留存真实脉络</p>
+      <p class="zj-hero-desc">
+        张津瑜影像档案官方网站是一个专注公共事件影像记录的品牌内容平台。我们以企业级的档案标准整理素材、梳理时间线、聚合创作者表达，为关注公共讨论的用户提供可信赖的影像索引与深度观察。
+      </p>
+      <div class="zj-hero-stats">
+        <div>
+          <div class="zj-stat-num" data-count="2860">0<em>+</em></div>
+          <div class="zj-stat-label">归档影像素材</div>
+        </div>
+        <div>
+          <div class="zj-stat-num" data-count="146">0<em>位</em></div>
+          <div class="zj-stat-label">签约创作者</div>
+        </div>
+        <div>
+          <div class="zj-stat-num" data-count="9">0<em>年</em></div>
+          <div class="zj-stat-label">持续运营</div>
+        </div>
+      </div>
+      <div class="zj-hero-actions">
+        <a href="#zj-focus" class="zj-btn zj-btn-primary">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M7 4l13 8-13 8z"/></svg>
+          浏览焦点影像
+        </a>
+        <a href="#zj-creators" class="zj-btn zj-btn-ghost">查看创作者矩阵</a>
+        <a href="#zj-contact" class="zj-btn zj-btn-ghost">投稿与共创</a>
+      </div>
+    </div>
+    <div class="zj-hero-visual">
+      <div class="zj-hero-frame">
+        <span class="zj-hero-badge">焦点档案</span>
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23242a35'/%3E%3Cstop offset='0.55' stop-color='%233b2028'/%3E%3Cstop offset='1' stop-color='%23101318'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='400' fill='url(%23g1)'/%3E%3Cg stroke='%23ff5a5a' stroke-opacity='0.5'%3E%3Cpath d='M0 300 Q160 240 320 300 T640 280' fill='none' stroke-width='1.5'/%3E%3Cpath d='M0 330 Q180 270 340 330 T640 310' fill='none' stroke-width='1' stroke-opacity='0.3'/%3E%3C/g%3E%3Ccircle cx='480' cy='120' r='52' fill='none' stroke='%23ff5a5a' stroke-opacity='0.55' stroke-width='2'/%3E%3Ccircle cx='480' cy='120' r='30' fill='%23ff5a5a' fill-opacity='0.16'/%3E%3Crect x='60' y='70' width='150' height='10' rx='5' fill='%23ffffff' fill-opacity='0.5'/%3E%3Crect x='60' y='96' width='104' height='10' rx='5' fill='%23ffffff' fill-opacity='0.22'/%3E%3Crect x='60' y='122' width='132' height='10' rx='5' fill='%23ffffff' fill-opacity='0.14'/%3E%3Crect x='60' y='190' width='300' height='6' rx='3' fill='%23ffffff' fill-opacity='0.12'/%3E%3Crect x='60' y='208' width='250' height='6' rx='3' fill='%23ffffff' fill-opacity='0.09'/%3E%3Crect x='60' y='226' width='278' height='6' rx='3' fill='%23ffffff' fill-opacity='0.07'/%3E%3Cpath d='M300 150l40 22-40 22z' fill='%23ffffff' fill-opacity='0.88'/%3E%3Crect x='0' y='352' width='640' height='48' fill='%23000000' fill-opacity='0.45'/%3E%3C/svg%3E" alt="张津瑜影像档案主视觉·公共讨论时间线示意图">
+        <div class="zj-hero-frame-cap">
+          <h3>影像档案 · 公共讨论的九十个日夜</h3>
+          <span>档案编号 ZJ-2026-118</span>
+        </div>
+      </div>
+      <div class="zj-hero-mini">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 180'%3E%3Cdefs%3E%3ClinearGradient id='g2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0a13a'/%3E%3Cstop offset='1' stop-color='%236a3410'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='320' height='180' fill='url(%23g2)'/%3E%3Cpath d='M0 140 L80 96 L160 132 L240 88 L320 126 L320 180 L0 180Z' fill='%23ffffff' fill-opacity='0.18'/%3E%3Ccircle cx='258' cy='52' r='26' fill='%23fff2d6' fill-opacity='0.85'/%3E%3Crect x='24' y='28' width='96' height='8' rx='4' fill='%23ffffff' fill-opacity='0.7'/%3E%3Crect x='24' y='46' width='62' height='8' rx='4' fill='%23ffffff' fill-opacity='0.32'/%3E%3C/svg%3E" alt="张津瑜档案·事件时间线橙调缩略图">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 深度解析 ============ -->
+<section class="zj-section" id="zj-about">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">品牌深度解析</div>
+      <h2 class="zj-sec-title">我们如何理解「张津瑜」这一影像命题</h2>
+      <p class="zj-sec-sub">以下内容为张津瑜影像档案官网的品牌阐述，说明平台定位、档案整理原则与社区内容生态。</p>
+    </div>
+
+    <div class="zj-intro-grid">
+      <div class="zj-article">
+        <p>
+          在信息高度碎片化的时代，一段影像往往会在数小时内被反复截取、转述与再加工，最终留下的只剩情绪，而非事实本身。<b>张津瑜影像档案</b>正是在这样的背景下建立的品牌平台：我们不做情绪的放大器，而做时间线的整理者。围绕与「张津瑜」相关的一系列公共讨论事件，平台以企业级档案管理的思路，对公开影像素材进行来源标注、时间归位与上下文补全，力求让每一次回看都能找到确切的坐标。
+        </p>
+        <p>
+          作为国内较早专注于公共事件影像归档的官方网站之一，我们坚持三条原则：<b>来源可追溯、时间可核对、表达可讨论</b>。所有进入档案库的素材都会经过至少两道人工复核，标注拍摄时间、上传渠道与可能的剪辑痕迹；对于来源不明的画面，我们不做结论性描述，而是以「待核验」标签明确提示。这种略显克制的做法，使平台在长期运营中积累了值得信赖的口碑，也让「张津瑜影像档案」逐渐成为观察此类公共事件时绕不开的索引站点。
+        </p>
+
+        <h3>一、为什么需要一份影像档案</h3>
+        <p>
+          公共讨论中的影像常常面临三个问题：<b>第一是被快速消费</b>，一段几分钟的素材被压缩成十几秒的切片，语境随之消失；<b>第二是被反复误传</b>，同一画面配上不同解说，在不同渠道间流转；<b>第三是被遗忘</b>，热度过去之后，原始素材散落在各处，难以再被检索。影像档案的价值，恰恰在于对抗这三种损耗。我们为每条素材建立独立编号，记录其首次出现的时间与位置，并在页面中长期保留索引入口，使「张津瑜」相关的影像资料具备可回访、可比对的稳定结构。
+        </p>
+        <p>
+          与此同时，档案并非冷冰冰的仓库。平台同步设置了创作者观察、社区讨论与专题企划，让素材在被检索之外，还能被阅读、被解释、被不同立场的用户以理性方式讨论。我们希望呈现的，不是单一结论，而是一条条可以被追索的线索——这也是张津瑜影像档案官网区别于普通资讯聚合页的核心差异。
+        </p>
+
+        <h3>二、内容生态：从素材到叙事</h3>
+        <p>
+          平台的内容生态由三层构成。<b>底层是素材层</b>，包含公开流传的影像片段、截图与时间记录，全部经过编号与来源标注；<b>中层是整理层</b>，由签约创作者与编辑部共同完成时间线梳理、上下文补全与事实核对，形成可阅读的档案条目；<b>顶层是讨论层</b>，通过专题企划、创作者访谈与社区评论，把零散的事实组织成可以持续对话的公共议题。三层之间并非单向流动，社区的反馈会反向推动素材补录与条目修订，形成闭环。
+        </p>
+        <p>
+          在这一生态中，"张津瑜"不再只是一个被搜索的名字，而是一组可被系统阅读的影像叙事。我们相信，真实的力量来自完整的上下文，而非截断的瞬间。因此平台在每一篇深度条目中都保留了「相关素材」「时间脉络」「不同观点」三个固定板块，鼓励读者在得出结论前，先看清全貌。
+        </p>
+
+        <h3>三、编辑准则与合规底线</h3>
+        <p>
+          作为持续运营的官方网站，平台制定了明确的编辑准则：不传播未经核实的私人信息，不对当事人进行人身评价，不制作煽动性标题，不对未成年人相关内容做任何形式的展示。对于涉及隐私的素材，一律做模糊化或不予收录处理。我们深知，公共讨论的边界感与内容的品质同等重要。
+        </p>
+        <p>
+          平台同时建立了内容复核与投诉反馈机制。任何用户都可以对索引条目提出异议，编辑部会在三个工作日内回应并公示处理结果。我们把这些流程公开写在帮助中心，是因为相信：一个值得信赖的影像档案平台，必须让规则本身也经得起审视。这也是张津瑜影像档案官网长期坚持的匠心所在——把复杂的事做慢一点，把该守的线守牢一点。
+        </p>
+      </div>
+
+      <aside>
+        <div class="zj-side-card">
+          <h3>平台关键词</h3>
+          <div class="zj-keyword-chips">
+            <span>官方网站</span><span>影像档案</span><span>时间线整理</span>
+            <span>公共讨论</span><span>创作者社区</span><span>来源可追溯</span>
+            <span>持续运营</span><span>精品内容</span><span>社会责任</span>
+          </div>
+        </div>
+        <div class="zj-side-card">
+          <h3>档案整理四步法</h3>
+          <ul class="zj-side-list">
+            <li><span class="zj-side-index">01</span><span>采集：记录素材首次出现的时间与渠道</span></li>
+            <li><span class="zj-side-index">02</span><span>核验：双人复核，标注剪辑与来源不明项</span></li>
+            <li><span class="zj-side-index">03</span><span>归位：放入统一时间线，补全上下文</span></li>
+            <li><span class="zj-side-index">04</span><span>公示：开放异议入口，接受社区监督</span></li>
+          </ul>
+        </div>
+        <div class="zj-side-card">
+          <h3>品牌数据速览</h3>
+          <ul class="zj-side-list">
+            <li><span class="zj-side-index">·</span><span>归档条目 1,240 篇，影像素材 2,860 条</span></li>
+            <li><span class="zj-side-index">·</span><span>签约创作者 146 位，覆盖 21 个省市</span></li>
+            <li><span class="zj-side-index">·</span><span>专题企划累计 38 期，平均更新周期 11 天</span></li>
+            <li><span class="zj-side-index">·</span><span>社区日均有效讨论 3,400 条</span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 焦点影像 ============ -->
+<section class="zj-section zj-section-alt" id="zj-focus">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">焦点影像</div>
+      <h2 class="zj-sec-title">本周重点推荐 · 张津瑜档案精选</h2>
+      <p class="zj-sec-sub">由编辑部与创作者共同挑选的六条重点影像，覆盖时间线梳理、创作者观察与社区讨论三个方向。</p>
+    </div>
+
+    <div class="zj-focus-grid">
+      <article class="zj-card zj-card-big">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">深度梳理</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 360'%3E%3Cdefs%3E%3ClinearGradient id='gf1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23151920'/%3E%3Cstop offset='1' stop-color='%23322b45'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='360' fill='url(%23gf1)'/%3E%3Cg fill='none' stroke='%237c8fff' stroke-opacity='0.6'%3E%3Cpath d='M40 300 L140 220 L240 260 L340 160 L440 210 L560 120' stroke-width='2'/%3E%3C/g%3E%3Cg fill='%237c8fff'%3E%3Ccircle cx='140' cy='220' r='5'/%3E%3Ccircle cx='240' cy='260' r='5'/%3E%3Ccircle cx='340' cy='160' r='5'/%3E%3Ccircle cx='440' cy='210' r='5'/%3E%3Ccircle cx='560' cy='120' r='5'/%3E%3C/g%3E%3Crect x='40' y='40' width='180' height='12' rx='6' fill='%23ffffff' fill-opacity='0.6'/%3E%3Crect x='40' y='66' width='120' height='10' rx='5' fill='%23ffffff' fill-opacity='0.24'/%3E%3Cpath d='M340 210l22 12-22 12z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="焦点影像·张津瑜事件时间线九十个日夜深度梳理封面">
+          <div class="zj-play">
+            <svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg>
+          </div>
+          <span class="zj-thumb-dur">24:18</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>从一条切片到九十个日夜：张津瑜事件的影像时间线</h3>
+          <p>以公开素材为经、以时间节点为纬，完整重建事件在影像中的传播路径，并逐一标注每段素材的来源与第一次出现的位置，帮助观众理解切片背后的完整语境。</p>
+          <div class="zj-meta">
+            <span class="zj-author-dot">档</span>
+            <span>编辑部 · 档案组</span>
+            <span>·</span>
+            <span>2026-11-18</span>
+            <span>·</span>
+            <span>12.6万 次播放</span>
+          </div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="1824">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg>
+              <span class="zj-like-num">1824</span>
+            </button>
+            <button class="zj-op zj-fav-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>
+              收藏
+            </button>
+            <button class="zj-op zj-share-btn">分享</button>
+            <button class="zj-op zj-report-btn">反馈</button>
+          </div>
+        </div>
+      </article>
+
+      <div class="zj-focus-side">
+        <article class="zj-card">
+          <div class="zj-thumb">
+            <span class="zj-thumb-tag">创作者观察</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='gf2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f5c26b'/%3E%3Cstop offset='1' stop-color='%238c4a1c'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23gf2)'/%3E%3Cg fill='%23ffffff' fill-opacity='0.22'%3E%3Crect x='30' y='170' width='46' height='70'/%3E%3Crect x='86' y='140' width='46' height='100'/%3E%3Crect x='142' y='186' width='46' height='54'/%3E%3Crect x='198' y='118' width='46' height='122'/%3E%3C/g%3E%3Crect x='290' y='40' width='150' height='10' rx='5' fill='%23ffffff' fill-opacity='0.66'/%3E%3Crect x='290' y='62' width='104' height='9' rx='4' fill='%23ffffff' fill-opacity='0.32'/%3E%3Cpath d='M364 130l18 10-18 10z' fill='%23ffffff' fill-opacity='0.92'/%3E%3C/svg%3E" alt="创作者观察·影像叙事中的真实与边界封面">
+            <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+            <span class="zj-thumb-dur">16:42</span>
+          </div>
+          <div class="zj-card-body">
+            <h3>影像叙事的边界：三位创作者谈真实与克制</h3>
+            <p>当公共事件成为素材，创作者如何在表达欲与克制之间做选择？三位纪录片方向的签约创作者给出各自的答案。</p>
+            <div class="zj-meta">
+              <span class="zj-author-dot" style="background:#b3711f">林</span>
+              <span>林岸</span><span>·</span><span>8.2万 次播放</span>
+            </div>
+            <div class="zj-card-ops">
+              <button class="zj-op zj-like-btn" data-base="936">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg>
+                <span class="zj-like-num">936</span>
+              </button>
+              <button class="zj-op zj-fav-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>
+                收藏
+              </button>
+              <button class="zj-op zj-share-btn">分享</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="zj-card">
+          <div class="zj-thumb">
+            <span class="zj-thumb-tag">社区讨论</span>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='gf3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2318485c'/%3E%3Cstop offset='1' stop-color='%23091722'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23gf3)'/%3E%3Cg stroke='%2340c9ff' stroke-opacity='0.5' fill='none'%3E%3Ccircle cx='120' cy='135' r='52'/%3E%3Ccircle cx='120' cy='135' r='30'/%3E%3Cpath d='M172 135h250'/%3E%3C/g%3E%3Cg fill='%2340c9ff'%3E%3Ccircle cx='240' cy='135' r='4'/%3E%3Ccircle cx='320' cy='135' r='4'/%3E%3Ccircle cx='400' cy='135' r='4'/%3E%3C/g%3E%3Crect x='30' y='32' width='110' height='9' rx='4' fill='%23ffffff' fill-opacity='0.55'/%3E%3Cpath d='M110 100l16 9-16 9z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="社区讨论·当公共事件成为影像档案圆桌实录封面">
+            <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+            <span class="zj-thumb-dur">38:05</span>
+          </div>
+          <div class="zj-card-body">
+            <h3>圆桌实录：当公共事件被做成影像档案</h3>
+            <p>来自传播学、纪录片与社区运营三个视角的对话，讨论档案整理对公共讨论质量的实际影响。</p>
+            <div class="zj-meta">
+              <span class="zj-author-dot" style="background:#187a9c">档</span>
+              <span>档案圆桌</span><span>·</span><span>5.7万 次播放</span>
+            </div>
+            <div class="zj-card-ops">
+              <button class="zj-op zj-like-btn" data-base="612">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg>
+                <span class="zj-like-num">612</span>
+              </button>
+              <button class="zj-op zj-fav-btn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>
+                收藏
+              </button>
+              <button class="zj-op zj-share-btn">分享</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 档案内容流 ============ -->
+<section class="zj-section" id="zj-stream">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">档案内容</div>
+      <h2 class="zj-sec-title">持续更新 · 张津瑜影像档案内容流</h2>
+      <p class="zj-sec-sub">按主题筛选浏览，所有条目均标注来源与核验状态，支持收藏与分享。</p>
+    </div>
+
+    <div class="zj-filter-bar" id="zjFilterBar">
+      <button class="zj-chip zj-chip-on" data-filter="all">全部条目</button>
+      <button class="zj-chip" data-filter="时间线">时间线梳理</button>
+      <button class="zj-chip" data-filter="访谈">人物访谈</button>
+      <button class="zj-chip" data-filter="科普">知识科普</button>
+      <button class="zj-chip" data-filter="观察">行业观察</button>
+    </div>
+
+    <div class="zj-stream" id="zjStreamGrid">
+
+      <article class="zj-card" data-cat="时间线">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">时间线梳理</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%231b2330'/%3E%3Cg stroke='%23ff6b6b' stroke-opacity='0.7'%3E%3Cpath d='M20 220h440' stroke-width='1.5'/%3E%3Cg stroke-width='1.5'%3E%3Cpath d='M60 220V150M150 220V110M240 220V170M330 220V90M420 220V140'/%3E%3C/g%3E%3C/g%3E%3Cg fill='%23ff6b6b'%3E%3Ccircle cx='60' cy='150' r='5'/%3E%3Ccircle cx='150' cy='110' r='5'/%3E%3Ccircle cx='240' cy='170' r='5'/%3E%3Ccircle cx='330' cy='90' r='5'/%3E%3Ccircle cx='420' cy='140' r='5'/%3E%3C/g%3E%3Crect x='30' y='30' width='130' height='11' rx='5' fill='%23ffffff' fill-opacity='0.55'/%3E%3Cpath d='M228 124l18 10-18 10z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="张津瑜事件关键节点时间线梳理图集封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">14:20</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>七个关键节点：一次公共讨论的完整生命周期</h3>
+          <p>从最初的一条短视频，到全网讨论高峰，再到逐渐沉淀，我们拆解了七个可核验节点。</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#b3261e">档</span><span>档案组</span><span>·</span><span>6.4万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="704">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">704</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="zj-card" data-cat="访谈">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">人物访谈</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='gs2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23324a3f'/%3E%3Cstop offset='1' stop-color='%230e1714'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23gs2)'/%3E%3Ccircle cx='120' cy='135' r='46' fill='%23ffffff' fill-opacity='0.14'/%3E%3Ccircle cx='120' cy='118' r='17' fill='%23ffffff' fill-opacity='0.55'/%3E%3Cpath d='M92 158a30 30 0 0 1 56 0z' fill='%23ffffff' fill-opacity='0.55'/%3E%3Crect x='210' y='80' width='180' height='10' rx='5' fill='%23ffffff' fill-opacity='0.5'/%3E%3Crect x='210' y='104' width='130' height='9' rx='4' fill='%23ffffff' fill-opacity='0.24'/%3E%3Crect x='210' y='126' width='158' height='9' rx='4' fill='%23ffffff' fill-opacity='0.16'/%3E%3Cpath d='M352 168l18 10-18 10z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="人物访谈·跟拍者自述记录公共现场的三年封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">21:09</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>跟拍者自述：记录公共现场的这三年</h3>
+          <p>一位长期记录公共现场的创作者，谈设备、谈克制、谈为什么他从不剪掉废片。</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#2f6b52">周</span><span>周汝舟</span><span>·</span><span>4.1万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="458">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">458</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="zj-card" data-cat="科普">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">知识科普</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23f2ede3'/%3E%3Cg stroke='%232f3b4c' fill='none' stroke-width='1.4'%3E%3Crect x='40' y='50' width='180' height='110' rx='6'/%3E%3Cpath d='M60 90h140M60 112h96M60 134h120'/%3E%3C/g%3E%3Cg stroke='%23c0392b' fill='none' stroke-width='1.6'%3E%3Ccircle cx='340' cy='120' r='52'/%3E%3Cpath d='M340 84v36l26 18'/%3E%3C/g%3E%3Crect x='40' y='196' width='112' height='9' rx='4' fill='%232f3b4c' fill-opacity='0.4'/%3E%3Cpath d='M256 120l16 9-16 9z' fill='%232f3b4c' fill-opacity='0.8'/%3E%3C/svg%3E" alt="知识科普·如何识别经过剪辑的影像素材讲解封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">09:33</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>如何识别经过剪辑的影像：五个可操作的方法</h3>
+          <p>从帧率、音轨、画面接缝到元信息，用普通人也能上手的方式判断素材是否被处理过。</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#8a6d1f">柯</span><span>柯言</span><span>·</span><span>9.8万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="1210">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">1210</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="zj-card" data-cat="观察">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">行业观察</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='gs4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%239c4dff'/%3E%3Cstop offset='1' stop-color='%23221a38'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23gs4)'/%3E%3Cg fill='%23ffffff' fill-opacity='0.2'%3E%3Crect x='36' y='150' width='52' height='86' rx='3'/%3E%3Crect x='104' y='112' width='52' height='124' rx='3'/%3E%3Crect x='172' y='76' width='52' height='160' rx='3'/%3E%3Crect x='240' y='132' width='52' height='104' rx='3'/%3E%3Crect x='308' y='96' width='52' height='140' rx='3'/%3E%3C/g%3E%3Crect x='36' y='34' width='150' height='11' rx='5' fill='%23ffffff' fill-opacity='0.6'/%3E%3Crect x='36' y='58' width='96' height='9' rx='4' fill='%23ffffff' fill-opacity='0.28'/%3E%3Cpath d='M388 118l18 10-18 10z' fill='%23ffffff' fill-opacity='0.92'/%3E%3C/svg%3E" alt="行业观察·影像档案平台的三种运营路径分析封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">18:47</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>影像档案平台的三条运营路径：谁在为真实付费</h3>
+          <p>公益归档、机构合作、社区共创，三种模式各自的成本结构与长期价值对比。</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#6a3aa8">编</span><span>编辑部 · 观察组</span><span>·</span><span>3.5万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="386">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">386</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="zj-card" data-cat="时间线">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">时间线梳理</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Crect width='480' height='270' fill='%23111c22'/%3E%3Cg stroke='%2336d6a8' fill='none' stroke-width='1.5' stroke-opacity='0.7'%3E%3Cpath d='M30 200 Q120 120 210 170 T390 110 T470 150'/%3E%3C/g%3E%3Cg fill='%2336d6a8'%3E%3Ccircle cx='120' cy='148' r='4'/%3E%3Ccircle cx='300' cy='146' r='4'/%3E%3Ccircle cx='390' cy='110' r='4'/%3E%3C/g%3E%3Cg stroke='%23ffffff' stroke-opacity='0.16'%3E%3Cpath d='M0 60h480M0 100h480M0 140h480'/%3E%3C/g%3E%3Crect x='30' y='26' width='126' height='10' rx='5' fill='%23ffffff' fill-opacity='0.6'/%3E%3Cpath d='M222 80l16 9-16 9z' fill='%23ffffff' fill-opacity='0.92'/%3E%3C/svg%3E" alt="张津瑜相关素材来源核验与编号规则说明封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">11:56</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>素材来源核验与编号：档案组的日常工作流程</h3>
+          <p>一条素材从进入候选池到正式入库，要经过哪些步骤？完整展示编号规则与核验表。</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#1e7f63">档</span><span>档案组</span><span>·</span><span>2.9万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="322">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">322</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="zj-card" data-cat="访谈">
+        <div class="zj-thumb">
+          <span class="zj-thumb-tag">人物访谈</span>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 480 270'%3E%3Cdefs%3E%3ClinearGradient id='gs6' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23e0503f'/%3E%3Cstop offset='1' stop-color='%23441a16'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='480' height='270' fill='url(%23gs6)'/%3E%3Cg fill='%23ffffff' fill-opacity='0.16'%3E%3Ccircle cx='96' cy='134' r='38'/%3E%3Ccircle cx='176' cy='134' r='38'/%3E%3Ccircle cx='256' cy='134' r='38'/%3E%3C/g%3E%3Crect x='38' y='38' width='140' height='11' rx='5' fill='%23ffffff' fill-opacity='0.6'/%3E%3Crect x='38' y='62' width='88' height='9' rx='4' fill='%23ffffff' fill-opacity='0.3'/%3E%3Cpath d='M350 118l18 10-18 10z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="人物访谈·三位社区志愿审读员的日常封面">
+          <div class="zj-play"><svg viewBox="0 0 24 24" fill="#fff"><path d="M7 4l13 8-13 8z"/></svg></div>
+          <span class="zj-thumb-dur">27:31</span>
+        </div>
+        <div class="zj-card-body">
+          <h3>社区志愿审读员：他们在替谁看完整段影像</h3>
+          <p>不拿工资、每天看数小时原始素材，这群人在平台的核验流程中扮演什么角色？</p>
+          <div class="zj-meta"><span class="zj-author-dot" style="background:#a83a2e">孟</span><span>孟知返</span><span>·</span><span>2.2万 次播放</span></div>
+          <div class="zj-card-ops">
+            <button class="zj-op zj-like-btn" data-base="286">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 11v9H3v-9zM7 11l5-8a2 2 0 0 1 3 2l-1 6h5a2 2 0 0 1 2 2l-2 7H7"/></svg><span class="zj-like-num">286</span>
+            </button>
+            <button class="zj-op zj-fav-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-4.6-9.3-9A4.8 4.8 0 0 1 12 6a4.8 4.8 0 0 1 9.3 6c-2.3 4.4-9.3 9-9.3 9z"/></svg>收藏</button>
+            <button class="zj-op zj-share-btn">分享</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 专题企划 ============ -->
+<section class="zj-section zj-section-alt" id="zj-topics">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">专题企划</div>
+      <h2 class="zj-sec-title">四个专题，四条理解张津瑜事件的路径</h2>
+      <p class="zj-sec-sub">专题由编辑部策划、创作者参与、社区共建，全年持续更新，支持订阅提醒。</p>
+    </div>
+
+    <div class="zj-topic-grid">
+      <a href="#zj-stream" class="zj-topic">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Cdefs%3E%3ClinearGradient id='gt1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%231c2634'/%3E%3Cstop offset='1' stop-color='%230a0f16'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='360' height='480' fill='url(%23gt1)'/%3E%3Cg stroke='%23ff5a5a' stroke-opacity='0.65' fill='none'%3E%3Ccircle cx='180' cy='190' r='76'/%3E%3Ccircle cx='180' cy='190' r='48'/%3E%3Ccircle cx='180' cy='190' r='20'/%3E%3C/g%3E%3Cpath d='M180 80v220M70 190h220' stroke='%23ff5a5a' stroke-opacity='0.28'/%3E%3Cg fill='%23ffffff' fill-opacity='0.24'%3E%3Crect x='40' y='360' width='180' height='9' rx='4'/%3E%3Crect x='40' y='382' width='120' height='8' rx='4'/%3E%3C/g%3E%3C/svg%3E" alt="专题企划·舆论场的三十天竖版封面">
+        <div class="zj-topic-info">
+          <em>专题 01 · 深度</em>
+          <h3>舆论场的三十天</h3>
+          <p>以日为刻度，记录一次公共讨论从爆发到沉淀的完整曲线。</p>
+          <span class="zj-topic-state">更新至 第 9 集</span>
+        </div>
+      </a>
+
+      <a href="#zj-stream" class="zj-topic">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Cdefs%3E%3ClinearGradient id='gt2' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23f0b428'/%3E%3Cstop offset='1' stop-color='%23573a08'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='360' height='480' fill='url(%23gt2)'/%3E%3Cg fill='%23ffffff' fill-opacity='0.28'%3E%3Crect x='50' y='300' width='40' height='120'/%3E%3Crect x='110' y='250' width='40' height='170'/%3E%3Crect x='170' y='200' width='40' height='220'/%3E%3Crect x='230' y='270' width='40' height='150'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.6'%3E%3Crect x='44' y='92' width='170' height='11' rx='5'/%3E%3Crect x='44' y='118' width='110' height='9' rx='4' fill-opacity='0.4'/%3E%3C/g%3E%3C/svg%3E" alt="专题企划·谁在记录公共现场竖版封面">
+        <div class="zj-topic-info">
+          <em>专题 02 · 人物</em>
+          <h3>谁在记录公共现场</h3>
+          <p>走访十二位长期拍摄公共议题的创作者，谈他们的动机与代价。</p>
+          <span class="zj-topic-state">连载中 · 12 位</span>
+        </div>
+      </a>
+
+      <a href="#zj-stream" class="zj-topic">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Cdefs%3E%3ClinearGradient id='gt3' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%232f7d6b'/%3E%3Cstop offset='1' stop-color='%230c1f1b'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='360' height='480' fill='url(%23gt3)'/%3E%3Cg stroke='%237ef0c8' stroke-opacity='0.55' fill='none' stroke-width='1.4'%3E%3Cpath d='M40 380 Q120 260 200 320 T330 200'/%3E%3Cpath d='M40 420 Q140 320 220 370 T330 260' stroke-opacity='0.3'/%3E%3C/g%3E%3Cg fill='%237ef0c8'%3E%3Ccircle cx='120' cy='298' r='5'/%3E%3Ccircle cx='240' cy='280' r='5'/%3E%3C/g%3E%3Crect x='40' y='80' width='150' height='11' rx='5' fill='%23ffffff' fill-opacity='0.55'/%3E%3Crect x='40' y='104' width='96' height='9' rx='4' fill='%23ffffff' fill-opacity='0.28'/%3E%3C/svg%3E" alt="专题企划·影像里的证据链竖版封面">
+        <div class="zj-topic-info">
+          <em>专题 03 · 方法</em>
+          <h3>影像里的证据链</h3>
+          <p>从一张截图到完整证据链，普通人也能掌握的核验工具箱。</p>
+          <span class="zj-topic-state">已完结 · 6 集</span>
+        </div>
+      </a>
+
+      <a href="#zj-stream" class="zj-topic">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 360 480'%3E%3Cdefs%3E%3ClinearGradient id='gt4' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23a06bff'/%3E%3Cstop offset='1' stop-color='%23241a3d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='360' height='480' fill='url(%23gt4)'/%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.34' stroke-width='1.4'%3E%3Crect x='56' y='170' width='248' height='150' rx='6'/%3E%3Cpath d='M56 210h248M56 250h248M56 290h248'/%3E%3C/g%3E%3Cg fill='%23ffffff' fill-opacity='0.6'%3E%3Crect x='56' y='80' width='150' height='11' rx='5'/%3E%3Crect x='56' y='104' width='90' height='9' rx='4' fill-opacity='0.34'/%3E%3C/g%3E%3Cpath d='M300 340l16 9-16 9z' fill='%23ffffff' fill-opacity='0.9'/%3E%3C/svg%3E" alt="专题企划·社区共创的十二种打开方式竖版封面">
+        <div class="zj-topic-info">
+          <em>专题 04 · 共创</em>
+          <h3>社区共创的十二种打开方式</h3>
+          <p>投稿、投票、译制、校对……社区如何真正参与内容生产。</p>
+          <span class="zj-topic-state">征集中 · 开放报名</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 创作者矩阵 ============ -->
+<section class="zj-section" id="zj-creators">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">创作者矩阵</div>
+      <h2 class="zj-sec-title">在张津瑜影像档案持续发声的人</h2>
+      <p class="zj-sec-sub">六位签约创作者，领域覆盖时间线整理、人物访谈、知识科普与行业观察。</p>
+    </div>
+
+    <div class="zj-creator-grid">
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-a">林</div>
+        <div class="zj-creator-info">
+          <h3>林岸 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">纪录片导演 · 人物访谈</div>
+          <p>十年纪录片经验，擅长用长镜头记录公共现场的细节。代表系列《边界》《在场》。</p>
+          <div class="zj-creator-stats"><span>作品 <b>64</b></span><span>关注 <b>8.2万</b></span></div>
+        </div>
+      </div>
+
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-b">柯</div>
+        <div class="zj-creator-info">
+          <h3>柯言 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">影像技术 · 知识科普</div>
+          <p>前媒体技术审核，专注影像真伪识别与元信息解读，课程累计学习超三十万人次。</p>
+          <div class="zj-creator-stats"><span>作品 <b>92</b></span><span>关注 <b>11.4万</b></span></div>
+        </div>
+      </div>
+
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-c">周</div>
+        <div class="zj-creator-info">
+          <h3>周汝舟 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">公共现场 · 日常记录</div>
+          <p>独立跟拍者，三年间记录超过四百场公共活动，坚持废片全留的原始备份原则。</p>
+          <div class="zj-creator-stats"><span>作品 <b>37</b></span><span>关注 <b>4.6万</b></span></div>
+        </div>
+      </div>
+
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-d">孟</div>
+        <div class="zj-creator-info">
+          <h3>孟知返 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">社区运营 · 人物访谈</div>
+          <p>平台早期志愿者，现负责社区审读员访谈系列，已记录十九位普通参与者的故事。</p>
+          <div class="zj-creator-stats"><span>作品 <b>28</b></span><span>关注 <b>3.1万</b></span></div>
+        </div>
+      </div>
+
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-e">苏</div>
+        <div class="zj-creator-info">
+          <h3>苏合 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">行业观察 · 商业分析</div>
+          <p>长期观察内容平台的运营模式，撰写影像档案行业年度报告，被多家机构引用。</p>
+          <div class="zj-creator-stats"><span>作品 <b>45</b></span><span>关注 <b>5.9万</b></span></div>
+        </div>
+      </div>
+
+      <div class="zj-creator">
+        <div class="zj-avatar zj-avatar-f">夏</div>
+        <div class="zj-creator-info">
+          <h3>夏未迟 <span class="zj-verified">官方认证</span></h3>
+          <div class="zj-creator-field">视觉设计 · 影像叙事</div>
+          <p>负责多个专题的视觉呈现，主张档案页面也应具备阅读节奏与情绪温度。</p>
+          <div class="zj-creator-stats"><span>作品 <b>33</b></span><span>关注 <b>4.2万</b></span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 故事随笔 ============ -->
+<section class="zj-section zj-section-alt" id="zj-stories">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">故事与随笔</div>
+      <h2 class="zj-sec-title">档案之外，那些没有剪进片子的时刻</h2>
+      <p class="zj-sec-sub">来自创作者与编辑部的三篇短文，记录整理影像时遇到的人与事。</p>
+    </div>
+
+    <div class="zj-story-grid">
+      <article class="zj-story">
+        <div class="zj-story-date">2026 / 11 / 16</div>
+        <h3>凌晨两点，我们把一段影像重新看了一遍</h3>
+        <p>核验组的灯一直亮着。那段素材被转发了几十万次，但我们发现它的音轨和画面对不上。把事情弄清楚，比赶在热度最高时发出来更重要——这句话后来被贴在了档案组的墙上。</p>
+        <div class="zj-story-author">—— 档案组 · 值班记录</div>
+      </article>
+
+      <article class="zj-story">
+        <div class="zj-story-date">2026 / 11 / 09</div>
+        <h3>一位志愿者寄来了一整箱硬盘</h3>
+        <p>他在信里说，这些是三年里自己拍的公共活动原始素材，没有剪辑，没有配乐，只有时间和地点。他愿意把它们交给平台，唯一的要求是"别把它们剪成短视频"。我们照做了。</p>
+        <div class="zj-story-author">—— 孟知返</div>
+      </article>
+
+      <article class="zj-story">
+        <div class="zj-story-date">2026 / 10 / 28</div>
+        <h3>关于张津瑜，我们想说的其实很少</h3>
+        <p>编辑部开会时有人问，这个档案最终要得出什么结论。答案是：不需要结论。我们只需要把时间顺序摆对，把来源写清楚，让后来的人可以自己判断。克制，是这份工作最重要的能力。</p>
+        <div class="zj-story-author">—— 编辑部</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 影像墙 ============ -->
+<section class="zj-section" id="zj-wall">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">影像墙</div>
+      <h2 class="zj-sec-title">社区投稿精选 · 张津瑜相关影像索引</h2>
+      <p class="zj-sec-sub">由社区用户上传并授权的影像索引封面，按尺寸与主题混合排布，点击可查看条目说明。</p>
+    </div>
+
+    <div class="zj-wall">
+      <div class="zj-wall-item zj-wall-big zj-wall-h">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 520'%3E%3Cdefs%3E%3ClinearGradient id='gw1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%231c2431'/%3E%3Cstop offset='1' stop-color='%233d2a35'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='640' height='520' fill='url(%23gw1)'/%3E%3Cg fill='none' stroke='%23ff5a5a' stroke-opacity='0.55' stroke-width='1.6'%3E%3Crect x='80' y='140' width='480' height='240' rx='8'/%3E%3Cpath d='M160 240h320M160 290h240M160 340h180'/%3E%3C/g%3E%3Ccircle cx='520' cy='112' r='24' fill='%23ff5a5a' fill-opacity='0.7'/%3E%3Crect x='80' y='72' width='190' height='12' rx='6' fill='%23ffffff' fill-opacity='0.6'/%3E%3C/svg%3E" alt="影像墙·公共讨论时间线长卷封面">
+        <span>公共讨论时间线长卷</span>
+      </div>
+      <div class="zj-wall-item zj-wall-w">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 240'%3E%3Crect width='420' height='240' fill='%23e8dfcc'/%3E%3Cg stroke='%23413a2e' fill='none' stroke-width='1.4'%3E%3Cpath d='M40 190 L120 120 L200 168 L280 92 L370 150'/%3E%3C/g%3E%3Cg fill='%23413a2e'%3E%3Ccircle cx='120' cy='120' r='5'/%3E%3Ccircle cx='200' cy='168' r='5'/%3E%3Ccircle cx='280' cy='92' r='5'/%3E%3C/g%3E%3Crect x='40' y='40' width='130' height='10' rx='5' fill='%23413a2e' fill-opacity='0.5'/%3E%3C/svg%3E" alt="影像墙·纸面时间线手绘图">
+        <span>纸面时间线手绘图</span>
+      </div>
+      <div class="zj-wall-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%232a3f52'/%3E%3Ccircle cx='130' cy='110' r='46' fill='none' stroke='%237cc7ff' stroke-width='2' stroke-opacity='0.7'/%3E%3Crect x='70' y='180' width='120' height='9' rx='4' fill='%237cc7ff' fill-opacity='0.5'/%3E%3C/svg%3E" alt="影像墙·设备与核验工具静物">
+        <span>核验工具静物</span>
+      </div>
+      <div class="zj-wall-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%23f0a13a'/%3E%3Cg fill='%23ffffff' fill-opacity='0.4'%3E%3Crect x='40' y='130' width='30' height='70'/%3E%3Crect x='86' y='100' width='30' height='100'/%3E%3Crect x='132' y='150' width='30' height='50'/%3E%3Crect x='178' y='110' width='30' height='90'/%3E%3C/g%3E%3Crect x='40' y='48' width='110' height='10' rx='5' fill='%23ffffff' fill-opacity='0.7'/%3E%3C/svg%3E" alt="影像墙·社区讨论热度柱状图">
+        <span>讨论热度柱状图</span>
+      </div>
+      <div class="zj-wall-item zj-wall-w">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 240'%3E%3Crect width='420' height='240' fill='%2314281f'/%3E%3Cg stroke='%2336d6a8' fill='none' stroke-width='1.4' stroke-opacity='0.65'%3E%3Cpath d='M30 180 Q120 100 210 150 T390 110'/%3E%3C/g%3E%3Cg fill='%2336d6a8'%3E%3Ccircle cx='120' cy='130' r='5'/%3E%3Ccircle cx='300' cy='132' r='5'/%3E%3C/g%3E%3Crect x='30' y='40' width='150' height='10' rx='5' fill='%23ffffff' fill-opacity='0.55'/%3E%3C/svg%3E" alt="影像墙·核验流程折线示意图">
+        <span>核验流程折线示意</span>
+      </div>
+      <div class="zj-wall-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%233a2c46'/%3E%3Cg fill='%23ffffff' fill-opacity='0.18'%3E%3Ccircle cx='80' cy='90' r='26'/%3E%3Ccircle cx='180' cy='90' r='26'/%3E%3C/g%3E%3Cg fill='%23c9a0ff'%3E%3Ccircle cx='80' cy='90' r='9'/%3E%3Ccircle cx='180' cy='90' r='9'/%3E%3C/g%3E%3Crect x='60' y='170' width='140' height='9' rx='4' fill='%23ffffff' fill-opacity='0.4'/%3E%3C/svg%3E" alt="影像墙·访谈现场双人剪影">
+        <span>访谈现场剪影</span>
+      </div>
+      <div class="zj-wall-item zj-wall-sm">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%23c0392b'/%3E%3Cpath d='M130 70l44 76h-88z' fill='none' stroke='%23ffffff' stroke-width='2' stroke-opacity='0.75'/%3E%3Crect x='86' y='180' width='88' height='9' rx='4' fill='%23ffffff' fill-opacity='0.5'/%3E%3C/svg%3E" alt="影像墙·标注警示图标封面">
+        <span>标注警示图标</span>
+      </div>
+      <div class="zj-wall-item zj-wall-w">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 240'%3E%3Crect width='420' height='240' fill='%23dcd6c8'/%3E%3Cg stroke='%233a3a3a' fill='none' stroke-width='1.4'%3E%3Crect x='40' y='50' width='150' height='140' rx='4'/%3E%3Cpath d='M60 90h110M60 116h84M60 142h96'/%3E%3C/g%3E%3Cg stroke='%23c0392b' stroke-width='1.6' fill='none'%3E%3Cpath d='M250 120h120M310 60v120'/%3E%3C/g%3E%3C/svg%3E" alt="影像墙·档案目录与索引卡片">
+        <span>档案目录与索引卡片</span>
+      </div>
+      <div class="zj-wall-item">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%232f4a3a'/%3E%3Cg fill='%23a8e6c3' fill-opacity='0.65'%3E%3Ccircle cx='70' cy='160' r='6'/%3E%3Ccircle cx='110' cy='120' r='6'/%3E%3Ccircle cx='150' cy='150' r='6'/%3E%3Ccircle cx='190' cy='100' r='6'/%3E%3C/g%3E%3Cpath d='M70 160L110 120L150 150L190 100' stroke='%23a8e6c3' fill='none' stroke-width='1.4' stroke-opacity='0.5'/%3E%3Crect x='50' y='50' width='100' height='9' rx='4' fill='%23ffffff' fill-opacity='0.35'/%3E%3C/svg%3E" alt="影像墙·素材来源分布点位图">
+        <span>素材来源分布点位</span>
+      </div>
+      <div class="zj-wall-item zj-wall-sm">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 240'%3E%3Crect width='260' height='240' fill='%231f2229'/%3E%3Cg stroke='%23ffffff' stroke-opacity='0.5' stroke-width='1.2' fill='none'%3E%3Ccircle cx='130' cy='120' r='52'/%3E%3Ccircle cx='130' cy='120' r='28'/%3E%3C/g%3E%3Crect x='70' y='196' width='120' height='8' rx='4' fill='%23ffffff' fill-opacity='0.3'/%3E%3C/svg%3E" alt="影像墙·取景框线稿图">
+        <span>取景框线稿</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 用户评价 ============ -->
+<section class="zj-section zj-section-alt" id="zj-reviews">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">社区口碑</div>
+      <h2 class="zj-sec-title">用户如何评价张津瑜影像档案</h2>
+      <p class="zj-sec-sub">以下评价来自社区真实反馈，覆盖内容质量、使用体验与品牌信任三个维度。</p>
+    </div>
+
+    <div class="zj-review-grid">
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-b">陈</div>
+          <div>
+            <div class="zj-review-name">陈默</div>
+            <div class="zj-review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>最打动我的是它不急着下结论。看完时间线整理那一集，才发现自己之前转发的片段被剪掉了最关键的前后语境。这种把完整上下文摆出来的做法，在现在真的很少见了。</p>
+        <div class="zj-review-foot"><span>3 天前</span><span>来自 移动端</span></div>
+      </div>
+
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-d">周</div>
+          <div>
+            <div class="zj-review-name">周二两</div>
+            <div class="zj-review-stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>核验流程讲得特别细，连编号规则都公开了。作为做内容审核的，我把这个站点推荐给了同事。唯一希望是视频加载能再快一点，有时候在地铁上看会卡。</p>
+        <div class="zj-review-foot"><span>6 天前</span><span>来自 桌面端</span></div>
+      </div>
+
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-c">何</div>
+          <div>
+            <div class="zj-review-name">何处安</div>
+            <div class="zj-review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>收藏夹里存了十几条。专题做得像一本可以慢慢翻的杂志，页面排版很舒服，不像大多数资讯站那样密密麻麻全是标题。能感觉到是认真做过视觉设计的团队。</p>
+        <div class="zj-review-foot"><span>1 周前</span><span>来自 移动端</span></div>
+      </div>
+
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-e">柳</div>
+          <div>
+            <div class="zj-review-name">柳青崖</div>
+            <div class="zj-review-stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>投稿流程挺顺的，提交之后两天就收到编辑回复，指出了我素材里的一个时间标注错误。虽然被退回了，但这种认真劲儿反而让我更愿意继续参与。</p>
+        <div class="zj-review-foot"><span>1 周前</span><span>来自 桌面端</span></div>
+      </div>
+
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-f">沈</div>
+          <div>
+            <div class="zj-review-name">沈砚之</div>
+            <div class="zj-review-stars">★★★★★</div>
+          </div>
+        </div>
+        <p>我不是特别关注这个事件的人，但偶尔刷到这里的行业观察文章，写得很有分寸。不煽动、不站队，把几种运营模式的账算得清清楚楚，属于可以反复读的那种内容。</p>
+        <div class="zj-review-foot"><span>2 周前</span><span>来自 移动端</span></div>
+      </div>
+
+      <div class="zj-review">
+        <div class="zj-review-head">
+          <div class="zj-avatar zj-avatar-a">罗</div>
+          <div>
+            <div class="zj-review-name">罗一勺</div>
+            <div class="zj-review-stars">★★★★☆</div>
+          </div>
+        </div>
+        <p>志愿者访谈那期看哭了。原来有这么多普通人在默默做整理工作。希望平台能多做一些幕后内容，让大家知道一条档案背后有多少人花了多少时间。</p>
+        <div class="zj-review-foot"><span>2 周前</span><span>来自 移动端</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 创作灵感 ============ -->
+<section class="zj-section" id="zj-inspire">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">创作灵感</div>
+      <h2 class="zj-sec-title">给创作者的三个选题方向与工具建议</h2>
+      <p class="zj-sec-sub">平台每月整理一次创作灵感，供投稿创作者参考，选题会随档案更新动态调整。</p>
+    </div>
+
+    <div class="zj-inspire-grid">
+      <div class="zj-inspire">
+        <div class="zj-inspire-num">01</div>
+        <h3>从一个细节切入，而不是从结论切入</h3>
+        <p>与其复述事件全貌，不如选一个具体物件：一台机器、一份记录表、一句留言。细节足够扎实，观众自然会去追问更大的问题。建议时长控制在 8 到 15 分钟。</p>
+      </div>
+      <div class="zj-inspire">
+        <div class="zj-inspire-num">02</div>
+        <h3>把核验过程本身拍成内容</h3>
+        <p>观众对"你怎么知道这是真的"越来越好奇。把查证、比对、否定的过程剪出来，比直接给出结论更有说服力。这类内容平台会优先推荐。</p>
+      </div>
+      <div class="zj-inspire">
+        <div class="zj-inspire-num">03</div>
+        <h3>用时间线做结构，而不是用情绪</h3>
+        <p>以时间节点为章节，每一章配一段原始素材与一段访谈，结构清晰且便于二次引用。平台提供时间线模板下载，创作者可直接套用。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 企业动态 ============ -->
+<section class="zj-section zj-section-alt" id="zj-updates">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">企业动态</div>
+      <h2 class="zj-sec-title">张津瑜影像档案 · 官方发布与更新日志</h2>
+      <p class="zj-sec-sub">平台近期的功能更新、内容发布与合作动向，均以官方公告为准。</p>
+    </div>
+
+    <div class="zj-timeline">
+      <div class="zj-tl-item">
+        <div class="zj-tl-date">2026 / 11 / 18</div>
+        <h3>专题《舆论场的三十天》第 9 集上线，同步开放社区投票</h3>
+        <p>本集聚焦讨论曲线的第三个阶段，新增 6 段原始素材与 2 位创作者访谈。社区投票通道将开放至 11 月 30 日，投票结果用于确定下一季专题方向。</p>
+      </div>
+      <div class="zj-tl-item">
+        <div class="zj-tl-date">2026 / 11 / 15</div>
+        <h3>「创作者共创计划」第三批报名开启</h3>
+        <p>面向时间线整理、人物访谈、知识科普三个方向招募 30 位创作者。报名需提交一份不超过 5 分钟的样片与选题说明，审核周期约 10 个工作日。</p>
+      </div>
+      <div class="zj-tl-item">
+        <div class="zj-tl-date">2026 / 11 / 10</div>
+        <h3>《内容合规与真实性守则》修订版正式发布</h3>
+        <p>修订版进一步明确了隐私模糊处理标准、来源标注格式与异议处理时限，全文可在帮助中心下载。平台将在 12 月组织一次面向创作者的线上说明会。</p>
+      </div>
+      <div class="zj-tl-item">
+        <div class="zj-tl-date">2026 / 11 / 06</div>
+        <h3>影像档案检索功能升级，支持按时间与来源双维度筛选</h3>
+        <p>新版本在条目页增加了来源类型标签与核验状态标识，并优化了移动端的加载速度。用户反馈的"检索结果过长"问题已在本版中处理。</p>
+      </div>
+      <div class="zj-tl-item">
+        <div class="zj-tl-date">2026 / 10 / 28</div>
+        <h3>平台与三家高校新闻传播学院达成内容研究合作</h3>
+        <p>合作将围绕公共事件影像的传播路径展开，研究成果将以公开报告形式发布。合作不涉及任何用户个人信息的共享，具体条款已在合作说明中公开。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 合作品牌 ============ -->
+<section class="zj-section" id="zj-partners">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">合作伙伴</div>
+      <h2 class="zj-sec-title">与我们共同维护内容生态的伙伴</h2>
+      <p class="zj-sec-sub">平台与机构、高校及社区组织保持长期合作，共同推进影像档案的规范化整理。</p>
+    </div>
+
+    <div class="zj-partners">
+      <div class="zj-partner">高校传播学院</div>
+      <div class="zj-partner">城市影像档案馆</div>
+      <div class="zj-partner">独立纪录片联盟</div>
+      <div class="zj-partner">社区审读志愿组</div>
+      <div class="zj-partner">影像技术研究社</div>
+      <div class="zj-partner">公共议题观察站</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="zj-section zj-section-alt" id="zj-faq">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">帮助中心</div>
+      <h2 class="zj-sec-title">关于张津瑜影像档案的常见问题</h2>
+      <p class="zj-sec-sub">如未找到答案，可通过页面底部的联系方式与编辑部取得联系。</p>
+    </div>
+
+    <div class="zj-faq">
+      <details open>
+        <summary>平台的影像素材来源是什么？</summary>
+        <p>素材主要来自三个渠道：公开流传的影像片段、签约创作者提交的原始素材，以及社区用户授权上传的内容。所有素材在入库前都会标注来源类型，来源不明的条目会明确标记为"待核验"，不作为结论性内容呈现。</p>
+      </details>
+      <details>
+        <summary>档案条目中的"核验状态"代表什么？</summary>
+        <p>核验状态分为三级：已核验（来源、时间、上下文均可确认）、部分核验（来源可确认但上下文存在缺失）、待核验（来源不明，仅作线索展示）。我们建议读者在引用时优先参考已核验条目，并注明核验时间。</p>
+      </details>
+      <details>
+        <summary>我可以投稿吗？投稿有什么要求？</summary>
+        <p>平台长期接受投稿，要求内容真实、来源清晰、不涉及他人隐私。投稿时需提供原始素材与拍摄说明，编辑部会在收到后 3 个工作日内给出初步反馈。涉及公共事件的投稿建议提前阅读帮助中心的《内容合规与真实性守则》。</p>
+      </details>
+      <details>
+        <summary>如果我发现条目内容有误，如何反馈？</summary>
+        <p>每条内容页的下方都设有"反馈"入口，提交时请注明具体条目编号与异议理由。编辑部会在 3 个工作日内回应，处理结果将在页面公示。对于确属错误的条目，我们会保留修订记录，以便读者追溯修改过程。</p>
+      </details>
+      <details>
+        <summary>平台如何处理涉及个人隐私的素材？</summary>
+        <p>涉及个人隐私的素材一律不予收录；已收录素材中若出现非必要展示的私人信息，平台会主动做模糊化处理。用户也可以申请对特定素材进行隐私处理，申请需提供合理说明，编辑部会在核实后处理。</p>
+      </details>
+      <details>
+        <summary>专题企划的更新周期是多久？</summary>
+        <p>不同专题的更新节奏不同，深度梳理类专题平均每 10 到 14 天更新一集，人物访谈类专题视采访进度安排，共创类专题按征集批次推进。所有更新都会在企业动态与公告条中提前告知。</p>
+      </details>
+      <details>
+        <summary>平台是否提供素材下载？</summary>
+        <p>部分经授权的原始素材提供下载，需在素材页提交用途说明并遵守授权协议。所有下载素材不得用于商业用途，不得删减或篡改内容，转载时须保留来源标注与条目编号。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 联系 ============ -->
+<section class="zj-section" id="zj-contact">
+  <div class="zj-wrap">
+    <div class="zj-sec-head">
+      <div class="zj-sec-kicker">联系我们</div>
+      <h2 class="zj-sec-title">投稿、合作与反馈</h2>
+      <p class="zj-sec-sub">无论是影像投稿、机构合作还是内容异议，都可以通过以下方式联系张津瑜影像档案编辑部。</p>
+    </div>
+
+    <div class="zj-contact-grid">
+      <div class="zj-contact-card">
+        <h3>编辑部信息</h3>
+        <p>我们重视每一条来自社区的声音。工作日 10:00 - 18:00 为集中处理时段，非紧急事项通常在 3 个工作日内回复。</p>
+        <ul class="zj-contact-list">
+          <li><b>投稿邮箱</b><span>archive@zj-video.example</span></li>
+          <li><b>合作联系</b><span>partner@zj-video.example</span></li>
+          <li><b>内容异议</b><span>review@zj-video.example</span></li>
+          <li><b>办公地址</b><span>华东地区 · 影像档案编辑部（预约制）</span></li>
+        </ul>
+        <div class="zj-contact-actions">
+          <button class="zj-btn zj-btn-primary" id="zjSubmitOpen">我要投稿</button>
+          <button class="zj-btn zj-btn-ghost" id="zjShareOpen" style="border-color:#4a505c;color:#d6dae0">分享本页</button>
+        </div>
+      </div>
+
+      <div class="zj-form">
+        <h3>快速反馈</h3>
+        <p>填写下方表单，编辑部会按提交顺序处理。</p>
+        <div class="zj-field">
+          <label for="zjName">称呼</label>
+          <input type="text" id="zjName" placeholder="请输入您的称呼">
+        </div>
+        <div class="zj-field">
+          <label for="zjType">反馈类型</label>
+          <select id="zjType">
+            <option>影像投稿</option>
+            <option>内容异议</option>
+            <option>机构合作</option>
+            <option>功能建议</option>
+          </select>
+        </div>
+        <div class="zj-field">
+          <label for="zjMsg">内容说明</label>
+          <textarea id="zjMsg" placeholder="请简要说明您的来意，包含相关条目编号更佳"></textarea>
+        </div>
+        <button class="zj-btn zj-btn-primary" id="zjFormSubmit">提交反馈</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="zj-footer">
+  <div class="zj-footer-inner">
+    <div class="zj-footer-top">
+      <div class="zj-footer-brand">
+        <h3>张津瑜影像档案</h3>
+        <p>张津瑜影像档案官方网站，专注公共事件影像的记录、整理与讨论。我们坚持来源可追溯、时间可核对、表达可讨论，致力于为社区提供值得信赖的影像索引与深度内容。</p>
+      </div>
+      <div class="zj-footer-col">
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#zj-focus">焦点影像</a></li>
+          <li><a href="#zj-stream">档案内容</a></li>
+          <li><a href="#zj-topics">专题企划</a></li>
+          <li><a href="#zj-wall">影像墙</a></li>
+        </ul>
+      </div>
+      <div class="zj-footer-col">
+        <h4>关于</h4>
+        <ul>
+          <li><a href="#zj-about">品牌深度解析</a></li>
+          <li><a href="#zj-creators">创作者矩阵</a></li>
+          <li><a href="#zj-updates">企业动态</a></li>
+          <li><a href="#zj-partners">合作伙伴</a></li>
+        </ul>
+      </div>
+      <div class="zj-footer-col">
+        <h4>支持</h4>
+        <ul>
+          <li><a href="#zj-faq">帮助中心</a></li>
+          <li><a href="#zj-contact">联系方式</a></li>
+          <li><a href="#zj-contact">投稿入口</a></li>
+          <li><a href="#zj-inspire">创作灵感</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="zj-footer-bottom">
+      <span>© 2017 - 2026 张津瑜影像档案 官方网站 | 版权所有 · 持续运营中</span>
+      <span>内容合规与真实性守则 · 隐私说明 · 社区公约</span>
+    </div>
+  </div>
+</footer>
+
+<button class="zj-top-btn" id="zjTopBtn" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+</button>
+
+<div class="zj-toast" id="zjToast"></div>
+
+<!-- share modal -->
+<div class="zj-modal" id="zjShareModal">
+  <div class="zj-modal-box">
+    <button class="zj-modal-close" data-close="zjShareModal">×</button>
+    <h3>分享本页</h3>
+    <p class="zj-modal-sub">将张津瑜影像档案分享给更多关注公共讨论的人</p>
+    <div class="zj-share-row">
+      <div class="zj-share-btn" data-share="微信">微信</div>
+      <div class="zj-share-btn" data-share="微博">微博</div>
+      <div class="zj-share-btn" data-share="QQ">QQ</div>
+      <div class="zj-share-btn" data-share="复制链接">复制链接</div>
+    </div>
+  </div>
+</div>
+
+<!-- submit modal -->
+<div class="zj-modal" id="zjSubmitModal">
+  <div class="zj-modal-box">
+    <button class="zj-modal-close" data-close="zjSubmitModal">×</button>
+    <h3>投稿说明</h3>
+    <p class="zj-modal-sub">提交前请确认你的素材符合以下要求</p>
+    <ul style="font-size:13.5px;color:#5a6068;line-height:2;padding-left:18px;margin-bottom:18px">
+      <li>素材来源清晰，可提供拍摄时间与地点说明</li>
+      <li>不包含他人隐私信息，或已完成模糊处理</li>
+      <li>不涉及未成年人相关内容</li>
+      <li>同意平台在标注来源的前提下进行整理与展示</li>
+    </ul>
+    <div class="zj-field">
+      <label for="zjSubmitEmail">接收回复的邮箱</label>
+      <input type="text" id="zjSubmitEmail" placeholder="name@example.com">
+    </div>
+    <button class="zj-btn zj-btn-primary" style="width:100%;justify-content:center" id="zjSubmitSend">确认提交意向</button>
+  </div>
+</div>
+
+<!-- report modal -->
+<div class="zj-modal" id="zjReportModal">
+  <div class="zj-modal-box">
+    <button class="zj-modal-close" data-close="zjReportModal">×</button>
+    <h3>内容反馈</h3>
+    <p class="zj-modal-sub">请选择你遇到的问题类型，编辑部会尽快核实</p>
+    <div class="zj-share-row" style="flex-direction:column">
+      <div class="zj-share-btn zj-report-opt" style="width:100%">素材来源标注有误</div>
+      <div class="zj-share-btn zj-report-opt" style="width:100%">内容涉及隐私信息</div>
+      <div class="zj-share-btn zj-report-opt" style="width:100%">时间线存在明显错误</div>
+      <div class="zj-share-btn zj-report-opt" style="width:100%">其他问题</div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- mobile nav ---------- */
+  var burger = document.getElementById('zjBurger');
+  var nav = document.getElementById('zjNav');
+  if(burger && nav){
+    burger.addEventListener('click', function(){
+      nav.classList.toggle('zj-nav-open');
+    });
+    nav.querySelectorAll('a').forEach(function(a){
+      a.addEventListener('click', function(){ nav.classList.remove('zj-nav-open'); });
+    });
+  }
+
+  /* ---------- toast ---------- */
+  var toastEl = document.getElementById('zjToast');
+  var toastTimer = null;
+  function toast(msg){
+    if(!toastEl) return;
+    toastEl.textContent = msg;
+    toastEl.classList.add('zj-show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('zj-show'); }, 2200);
+  }
+
+  /* ---------- search feedback ---------- */
+  var sInput = document.getElementById('zjSearchInput');
+  var sBtn = document.getElementById('zjSearchBtn');
+  var sFb = document.getElementById('zjSearchFeedback');
+  var searchPool = ['时间线梳理','人物访谈','知识科普','行业观察','舆论场的三十天','影像里的证据链','柯言','林岸','素材核验','社区共创'];
+  function doSearch(){
+    var q = (sInput && sInput.value || '').trim();
+    if(!q){
+      sFb.textContent = '请输入关键词，例如「时间线」「柯言」「核验」。';
+      sFb.classList.add('zj-show');
+      return;
+    }
+    var hits = searchPool.filter(function(k){ return k.indexOf(q) !== -1; });
+    if(hits.length){
+      sFb.textContent = '找到 ' + hits.length + ' 个相关条目：' + hits.join('、') + '。';
+    }else{
+      sFb.textContent = '暂未找到「' + q + '」的直接条目，已为你记录搜索词，编辑部会评估是否补充内容。';
+    }
+    sFb.classList.add('zj-show');
+  }
+  if(sBtn) sBtn.addEventListener('click', doSearch);
+  if(sInput){
+    sInput.addEventListener('keydown', function(e){ if(e.key === 'Enter') doSearch(); });
+    sInput.addEventListener('input', function(){
+      if(!sInput.value.trim()) sFb.classList.remove('zj-show');
+    });
+  }
+  document.addEventListener('click', function(e){
+    if(sFb && sFb.classList.contains('zj-show')){
+      var wrap = sFb.parentElement;
+      if(wrap && !wrap.contains(e.target)) sFb.classList.remove('zj-show');
+    }
+  });
+
+  /* ---------- like buttons ---------- */
+  document.querySelectorAll('.zj-like-btn').forEach(function(btn){
+    var numEl = btn.querySelector('.zj-like-num');
+    var base = parseInt(btn.getAttribute('data-base') || '100', 10);
+    var liked = false;
+    btn.addEventListener('click', function(){
+      liked = !liked;
+      var v = base + (liked ? 1 : 0);
+      if(numEl) numEl.textContent = v;
+      btn.classList.toggle('zj-active', liked);
+      toast(liked ? '已点赞，感谢你的支持' : '已取消点赞');
+    });
+  });
+
+  /* ---------- favorite buttons ---------- */
+  document.querySelectorAll('.zj-fav-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var on = btn.classList.toggle('zj-active');
+      var svg = btn.querySelector('svg');
+      if(svg) svg.setAttribute('fill', on ? 'currentColor' : 'none');
+      toast(on ? '已加入收藏夹' : '已取消收藏');
+    });
+  });
+
+  /* ---------- share ---------- */
+  var shareModal = document.getElementById('zjShareModal');
+  function openModal(id){
+    var m = document.getElementById(id);
+    if(m) m.classList.add('zj-show');
+  }
+  function closeModal(id){
+    var m = document.getElementById(id);
+    if(m) m.classList.remove('zj-show');
+  }
+  document.querySelectorAll('[data-close]').forEach(function(b){
+    b.addEventListener('click', function(){ closeModal(b.getAttribute('data-close')); });
+  });
+  document.querySelectorAll('.zj-modal').forEach(function(m){
+    m.addEventListener('click', function(e){ if(e.target === m) m.classList.remove('zj-show'); });
+  });
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){
+      document.querySelectorAll('.zj-modal.zj-show').forEach(function(m){ m.classList.remove('zj-show'); });
+    }
+  });
+
+  document.querySelectorAll('.zj-share-btn').forEach(function(btn){
+    if(btn.classList.contains('zj-report-opt')) return;
+    btn.addEventListener('click', function(){
+      var type = btn.getAttribute('data-share');
+      if(type === '复制链接'){
+        var done = function(){ toast('链接已复制到剪贴板'); };
+        var fail = function(){ toast('复制失败，请手动复制页面地址'); };
+        if(navigator.clipboard && navigator.clipboard.writeText){
+          navigator.clipboard.writeText(window.location.href).then(done).catch(fail);
+        }else{
+          try{
+            var ta = document.createElement('textarea');
+            ta.value = window.location.href;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            done();
+          }catch(err){ fail(); }
+        }
+      }else{
+        toast('已生成' + type + '分享提示');
+      }
+      closeModal('zjShareModal');
+    });
+  });
+
+  var shareOpen = document.getElementById('zjShareOpen');
+  if(shareOpen) shareOpen.addEventListener('click', function(){ openModal('zjShareModal'); });
+
+  /* ---------- report ---------- */
+  document.querySelectorAll('.zj-report-btn').forEach(function(btn){
+    btn.addEventListener('click', function(){ openModal('zjReportModal'); });
+  });
+  document.querySelectorAll('.zj-report-opt').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      closeModal('zjReportModal');
+      toast('反馈已提交，编辑部会尽快核实');
+    });
+  });
+
+  /* ---------- submit ---------- */
+  var submitOpen = document.getElementById('zjSubmitOpen');
+  if(submitOpen) submitOpen.addEventListener('click', function(){ openModal('zjSubmitModal'); });
+  var submitSend = document.getElementById('zjSubmitSend');
+  if(submitSend) submitSend.addEventListener('click', function(){
+    var email = document.getElementById('zjSubmitEmail');
+    if(email && !email.value.trim()){
+      toast('请先填写接收回复的邮箱');
+      return;
+    }
+    closeModal('zjSubmitModal');
+    toast('投稿意向已记录，请注意查收邮件');
+  });
+
+  var formSubmit = document.getElementById('zjFormSubmit');
+  if(formSubmit) formSubmit.addEventListener('click', function(){
+    var name = document.getElementById('zjName');
+    var msg = document.getElementById('zjMsg');
+    if(name && !name.value.trim()){ toast('请填写称呼'); return; }
+    if(msg && !msg.value.trim()){ toast('请填写内容说明'); return; }
+    toast('反馈已提交，感谢你的来信');
+    if(msg) msg.value = '';
+  });
+
+  /* ---------- filter chips ---------- */
+  var chips = document.querySelectorAll('#zjFilterBar .zj-chip');
+  var cards = document.querySelectorAll('#zjStreamGrid .zj-card');
+  chips.forEach(function(chip){
+    chip.addEventListener('click', function(){
+      chips.forEach(function(c){ c.classList.remove('zj-chip-on'); });
+      chip.classList.add('zj-chip-on');
+      var f = chip.getAttribute('data-filter');
+      var shown = 0;
+      cards.forEach(function(card){
+        var ok = (f === 'all') || (card.getAttribute('data-cat') === f);
+        card.style.display = ok ? '' : 'none';
+        if(ok) shown++;
+      });
+      toast(f === 'all' ? '已显示全部 ' + shown + ' 条内容' : '已筛选出 ' + shown + ' 条内容');
+    });
+  });
+
+  /* ---------- number count-up ---------- */
+  var counters = document.querySelectorAll('.zj-stat-num[data-count]');
+  function animateCounter(el){
+    var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+    var em = el.querySelector('em');
+    var suffix = em ? em.outerHTML : '';
+    var start = null, dur = 1400;
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1);
+      var eased = 1 - Math.pow(1 - p, 3);
+      var val = Math.round(target * eased);
+      el.innerHTML = val + suffix;
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting){
+          animateCounter(en.target);
+          io.unobserve(en.target);
+        }
+      });
+    }, {threshold:0.5});
+    counters.forEach(function(c){ io.observe(c); });
+  }else{
+    counters.forEach(function(c){
+      var t = parseInt(c.getAttribute('data-count'),10)||0;
+      var em = c.querySelector('em');
+      c.innerHTML = t + (em ? em.outerHTML : '');
+    });
+  }
+
+  /* ---------- back to top ---------- */
+  var topBtn = document.getElementById('zjTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 520){
+      topBtn.classList.add('zj-show');
+    }else{
+      topBtn.classList.remove('zj-show');
+    }
+  }, {passive:true});
+  if(topBtn) topBtn.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  /* ---------- nav active on scroll ---------- */
+  var navLinks = document.querySelectorAll('.zj-nav a');
+  var sections = [];
+  navLinks.forEach(function(a){
+    var id = a.getAttribute('href');
+    if(id && id.charAt(0) === '#'){
+      var sec = document.querySelector(id);
+      if(sec) sections.push({link:a, sec:sec});
+    }
+  });
+  window.addEventListener('scroll', function(){
+    var pos = window.scrollY + 140;
+    var current = sections[0];
+    sections.forEach(function(s){
+      if(s.sec.offsetTop <= pos) current = s;
+    });
+    if(current){
+      navLinks.forEach(function(a){ a.classList.remove('zj-nav-active'); });
+      current.link.classList.add('zj-nav-active');
+    }
+  }, {passive:true});
+
+})();
+</script>
+</body>
+  </html>
